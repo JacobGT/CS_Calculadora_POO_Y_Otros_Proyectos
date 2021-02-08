@@ -29,3 +29,10 @@ Ejemplos de herencia pedidos en clase, incluye la herencia de catedratico y etc.
 ![frmPrincipal Image](Images/frmSumar.png)
 
 Elementos *beta* de la calculadora. 
+
+
+
+### Clases incluidas en el proyecto
+![Clases Image](Images/clasesProyecto.png)
+
+Clases incluidas ~hasta ahora~
