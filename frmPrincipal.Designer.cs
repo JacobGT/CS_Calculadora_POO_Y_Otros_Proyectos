@@ -29,7 +29,6 @@ namespace Progra3
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ejemplosDePOOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumar2NumerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +46,7 @@ namespace Progra3
             this.ejemplosDePOOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1253, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1330, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuPrincipal";
             // 
@@ -65,21 +64,21 @@ namespace Progra3
             // sumar2NumerosToolStripMenuItem
             // 
             this.sumar2NumerosToolStripMenuItem.Name = "sumar2NumerosToolStripMenuItem";
-            this.sumar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sumar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.sumar2NumerosToolStripMenuItem.Text = "Sumar 2 numeros";
             this.sumar2NumerosToolStripMenuItem.Click += new System.EventHandler(this.sumar2NumerosToolStripMenuItem_Click);
             // 
             // restar2NumerosToolStripMenuItem
             // 
             this.restar2NumerosToolStripMenuItem.Name = "restar2NumerosToolStripMenuItem";
-            this.restar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.restar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.restar2NumerosToolStripMenuItem.Text = "Restar 2 numeros";
             this.restar2NumerosToolStripMenuItem.Click += new System.EventHandler(this.restar2NumerosToolStripMenuItem_Click);
             // 
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
@@ -88,14 +87,14 @@ namespace Progra3
             this.herenciaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.catedraticoToolStripMenuItem});
             this.herenciaToolStripMenuItem.Name = "herenciaToolStripMenuItem";
-            this.herenciaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.herenciaToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.herenciaToolStripMenuItem.Text = "Herencia";
             this.herenciaToolStripMenuItem.Click += new System.EventHandler(this.herenciaToolStripMenuItem_Click);
             // 
             // catedraticoToolStripMenuItem
             // 
             this.catedraticoToolStripMenuItem.Name = "catedraticoToolStripMenuItem";
-            this.catedraticoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.catedraticoToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.catedraticoToolStripMenuItem.Text = "Catedratico";
             this.catedraticoToolStripMenuItem.Click += new System.EventHandler(this.catedraticoToolStripMenuItem_Click);
             // 
@@ -103,12 +102,13 @@ namespace Progra3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1253, 716);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1330, 722);
             this.Controls.Add(this.menuStrip1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";

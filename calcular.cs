@@ -9,17 +9,29 @@ namespace Progra3
     class calcular
     {
         private double operando1 = 0, operando2 = 0, ultimaRespuesta = 0;
-        private string operador = "";
+        private string expresion = "", operacion = "";
 
-        public string Operador
+        public string Operacion
         {
             get
             {
-                return this.operador;
+                return this.operacion;
             }
             set
             {
-                this.operador = value;
+                this.operacion = value;
+            }
+        }
+
+        public string Expresion
+        {
+            get
+            {
+                return this.expresion;
+            }
+            set
+            {
+                this.expresion = value;
             }
         }
 
@@ -91,12 +103,17 @@ namespace Progra3
 
         public double raizNum()
         {
-            return Math.Pow(operando2, 1.0 / operando1);
+            return Math.Pow(operando1, 1.0 / operando2);
         }
 
         public double logNum()
         {
             return Math.Log(Operando1, Operando2);
+        }
+
+        public double valorAbs()
+        {
+            return Math.Abs(Convert.ToDouble(this.operando1));
         }
 
         public double factorial()
@@ -125,33 +142,47 @@ namespace Progra3
         }
         public double asin()
         {
-            return Math.Asin((operando1 * (Math.PI)) / 180);
+            return (Math.Asin(operando1)) * (180/Math.PI);
         }
         public double acos()
         {
-            return Math.Acos((operando1 * (Math.PI)) / 180);
+            return (Math.Acos(operando1)) * (180 / Math.PI);
         }
         public double atan()
         {
-            return Math.Atan((operando1 * (Math.PI)) / 180);
+            return (Math.Atan(operando1)) * (180 / Math.PI);
         }
         public double sinh()
         {
-            return Math.Sinh((operando1 * (Math.PI)) / 180);
+            return Math.Sinh(operando1);
         }
         public double cosh()
         {
-            return Math.Cosh((operando1 * (Math.PI)) / 180);
+            return Math.Cosh(operando1);
         }
         public double tanh()
         {
-            return Math.Tanh((operando1 * (Math.PI)) / 180);
+            return Math.Tanh(operando1);
+        }
+
+        public double masMenos()
+        {
+            if (this.operando1 > 0)
+            {
+                operando1 -= (operando1 * 2);
+                return operando1;
+            }
+            else
+            {
+                operando1 += (Math.Abs(operando1) * 2);
+                return operando1;
+            }
         }
 
         public double igual()
         {
             System.Data.DataTable table = new System.Data.DataTable();
-            ultimaRespuesta = Convert.ToDouble(table.Compute(this.operando1.ToString(), String.Empty));
+            ultimaRespuesta = Convert.ToDouble(table.Compute(this.expresion.ToString(), String.Empty));
             return ultimaRespuesta;
         }
     }

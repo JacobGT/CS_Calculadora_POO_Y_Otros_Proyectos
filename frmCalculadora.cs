@@ -24,15 +24,8 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                {
-                    txtPantalla.Text = "1";
-                }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                calc.Operador = "dividir";
-                txtPantalla.Text = "";
-                txtTempHist.Text += "%";
+                txtPantalla.Text += "/";
+                txtTempHist.Text += "/";
             } catch (Exception error)
             {
                 txtPantalla.Text = Convert.ToString(error);
@@ -110,6 +103,7 @@ namespace Progra3
         {
             txtPantalla.Text = "";
             txtTempHist.Text = "";
+            txtGrafica.Text = "";
             calc.Operando1 = 0;
             calc.Operando1 = 0;
         }
@@ -118,14 +112,7 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                {
-                    txtPantalla.Text = "0";
-                }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                calc.Operador = "sumar";
-                txtPantalla.Text = "";
+                txtPantalla.Text += "+";
                 txtTempHist.Text += "+";
             } catch (Exception error)
             {
@@ -138,85 +125,9 @@ namespace Progra3
         {
             try
             {
-                if (calc.Operador == "sumar")
-                {
-                    if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                    {
-                        txtPantalla.Text = "0";
-                    }
-                    double op2 = Convert.ToDouble(txtPantalla.Text);
-                    calc.Operando2 = op2;
-                    calc.UltimaRespuesta = calc.sumar();
-                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
-                    txtTempHist.Text += "=" + calc.UltimaRespuesta.ToString();
-                }
-                else if (calc.Operador == "restar")
-                {
-                    if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                    {
-                        txtPantalla.Text = "0";
-                    }
-                    double op2 = Convert.ToDouble(txtPantalla.Text);
-                    calc.Operando2 = op2; 
-                    calc.UltimaRespuesta = calc.restar();
-                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
-                    txtTempHist.Text += "=" + calc.UltimaRespuesta.ToString();
-                }
-                else if (calc.Operador == "multiplicar")
-                {
-                    if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                    {
-                        txtPantalla.Text = "1";
-                    }
-                    double op2 = Convert.ToDouble(txtPantalla.Text);
-                    calc.Operando2 = op2;
-                    calc.UltimaRespuesta = calc.multiplicar();
-                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
-                    txtTempHist.Text += "=" + calc.UltimaRespuesta.ToString();
-                }
-                else if (calc.Operador == "dividir")
-                {
-                    if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                    {
-                        txtPantalla.Text = "1";
-                    }
-                    else if (txtPantalla.Text == "0")
-                    {
-                        txtPantalla.Text = "No es permitido division entre 0";
-                    }
-                    double op2 = Convert.ToDouble(txtPantalla.Text);
-                    calc.Operando2 = op2;
-                    calc.UltimaRespuesta = calc.dividir();
-                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
-                    txtTempHist.Text += "=" + calc.UltimaRespuesta.ToString();
-                }
-                else if (calc.Operador == "potencia")
-                {
-                    if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                    {
-                        txtPantalla.Text = "0";
-                    }
-                    double op2 = Convert.ToDouble(txtPantalla.Text);
-                    calc.Operando2 = op2;
-                    calc.UltimaRespuesta = calc.potencia();
-                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
-                    txtTempHist.Text += "=" + calc.UltimaRespuesta.ToString();
-                }else if (calc.Operador == "raiz")
-                {
-                    if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                    {
-                        txtPantalla.Text = "0";
-                    }
-                    double op2 = Convert.ToDouble(txtPantalla.Text);
-                    calc.Operando2 = op2;
-                    calc.UltimaRespuesta = calc.raizNum();
-                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
-                    txtTempHist.Text += "=" + calc.UltimaRespuesta.ToString();
-                }
-                else
-                {
-                    txtPantalla.Text = "Syntax Error";
-                }
+                calc.Expresion = txtPantalla.Text;
+                calc.UltimaRespuesta = calc.igual();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
             } catch (Exception error)
             {
                 txtPantalla.Text = Convert.ToString(error);
@@ -228,14 +139,7 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                {
-                    txtPantalla.Text = "0";
-                }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                calc.Operador = "restar";
-                txtPantalla.Text = "";
+                txtPantalla.Text += "-";
                 txtTempHist.Text += "-";
             } catch (Exception error)
             {
@@ -248,14 +152,7 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
-                {
-                    txtPantalla.Text = "1";
-                }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                calc.Operador = "multiplicar";
-                txtPantalla.Text = "";
+                txtPantalla.Text += "*";
                 txtTempHist.Text += "*";
             } catch (Exception error)
             {
@@ -275,20 +172,10 @@ namespace Progra3
                 }
                 else
                 {
-                    double operadorTemporal = Convert.ToDouble(txtPantalla.Text);
-
-                    if (operadorTemporal > 0)
-                    {
-                        operadorTemporal -= (operadorTemporal * 2);
-                        txtPantalla.Text = Convert.ToString(operadorTemporal);
-                        txtTempHist.Text = Convert.ToString(operadorTemporal);
-                    }
-                    else
-                    {
-                        operadorTemporal += (Math.Abs(operadorTemporal) * 2);
-                        txtPantalla.Text = Convert.ToString(operadorTemporal);
-                        txtTempHist.Text = Convert.ToString(operadorTemporal);
-                    }
+                    calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                    calc.UltimaRespuesta = calc.Operando1;
+                    txtPantalla.Text = Convert.ToString(calc.masMenos());
+                    txtTempHist.Text = Convert.ToString(calc.masMenos());
                 }
                 
             } catch (Exception error)
@@ -319,11 +206,14 @@ namespace Progra3
         private void btnParenthesisLeft_Click(object sender, EventArgs e)
         {
             txtPantalla.Text += "(";
+            txtTempHist.Text += "(";
         }
 
         private void btnParenthesisRight_Click(object sender, EventArgs e)
         {
             txtPantalla.Text += ")";
+            txtTempHist.Text += ")";
+
         }
 
         private void btnMultiplicar_KeyPress(object sender, KeyPressEventArgs e)
@@ -395,6 +285,21 @@ namespace Progra3
                 case '^':
                     btnPotencia.PerformClick();
                     break;
+                case '!':
+                    btnFactorial.PerformClick();
+                    break;
+                case '(':
+                    btnParenthesisLeft.PerformClick();
+                    break;
+                case ')':
+                    btnParenthesisRight.PerformClick();
+                    break;
+                case 'e':
+                    btnEuler.PerformClick();
+                    break;
+                case 'π':
+                    btnPi.PerformClick();
+                    break;
                 default:
                     break;
             }
@@ -413,14 +318,26 @@ namespace Progra3
 
         private void btnValorAbsoluto_Click(object sender, EventArgs e)
         {
-            double valorAbsoluto = Math.Abs(Convert.ToDouble(txtPantalla.Text));
-            txtPantalla.Text = Convert.ToString(valorAbsoluto);
+            try
+            {
+                if (txtPantalla.Text == "")
+                {
+                    txtPantalla.Text = "0";
+                }
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.valorAbs();
+                txtPantalla.Text = Convert.ToString(calc.UltimaRespuesta);
+                txtTempHist.Text += "|" + calc.Operando1.ToString() + "| = " + txtPantalla.Text;
+            }catch (Exception error)
+            {
+                txtPantalla.Text = error.ToString();
+            }
+            
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double eValor = 2.71828;
 
         }
 
@@ -434,15 +351,18 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
+                if (txtPantalla.Text == "")
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                calc.Operador = "potencia";
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
                 txtPantalla.Text = "";
                 txtTempHist.Text += "^";
+                txtGrafica.Text = calc.Operando1.ToString() + "^";
+                btnOk.Enabled = true;
+                btnOk.ForeColor = Color.Red;
+                btnIgual.Enabled = false;
+                calc.Operacion = "potencia";
             }
             catch (Exception error)
             {
@@ -479,13 +399,12 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
+                if (txtPantalla.Text == "")
                 {
                     txtPantalla.Text = "0";
                 }
                 txtTempHist.Text = "√" + txtTempHist.Text;
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
                 calc.UltimaRespuesta = calc.raizCuadrada();
                 txtPantalla.Text = Convert.ToString(calc.UltimaRespuesta);
                 txtTempHist.Text += "=" + Convert.ToString(calc.UltimaRespuesta);
@@ -500,13 +419,12 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
+                if (txtPantalla.Text == "")
                 {
                     txtPantalla.Text = "0";
                 }
                 txtTempHist.Text = "³√" + txtTempHist.Text;
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
                 calc.Operando2 = 3;
                 calc.UltimaRespuesta = calc.raizNum();
                 txtPantalla.Text = Convert.ToString(calc.UltimaRespuesta);
@@ -535,7 +453,11 @@ namespace Progra3
         {
             try
             {
-                calc.UltimaRespuesta = Convert.ToDouble(txtPantalla.Text);
+                if (txtPantalla.Text == "")
+                {
+                    txtPantalla.Text = "0";
+                }
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
                 calc.Operando2 = 10;
                 txtTempHist.Text = "log " + txtPantalla.Text;
                 calc.UltimaRespuesta = calc.logNum();
@@ -545,6 +467,7 @@ namespace Progra3
             catch (Exception error)
             {
                 txtPantalla.Text = Convert.ToString(error);
+
             }
             
         }
@@ -553,15 +476,18 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
+                if (txtPantalla.Text == "")
                 {
                     txtPantalla.Text = "0";
                 }
-                txtTempHist.Text = txtPantalla.Text + "^ⁿ√";
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1; 
-                calc.Operador = "raiz";
+                calc.Operando2 = Convert.ToDouble(txtPantalla.Text);
                 txtPantalla.Text = "";
+                txtTempHist.Text += "^√";
+                txtGrafica.Text = calc.Operando2.ToString() + "^√";
+                btnOk.Enabled = true;
+                btnOk.ForeColor = Color.Red;
+                btnIgual.Enabled = false;
+                calc.Operacion = "raiz";
             }
             catch (Exception error)
             {
@@ -573,7 +499,11 @@ namespace Progra3
         {
             try
             {
-                calc.UltimaRespuesta = Convert.ToDouble(txtPantalla.Text);
+                if (txtPantalla.Text == "")
+                {
+                    txtPantalla.Text = "0";
+                }
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
                 txtTempHist.Text = "ln " + txtPantalla.Text;
                 calc.Operando2 = Math.E;
                 calc.UltimaRespuesta = calc.logNum();
@@ -590,15 +520,15 @@ namespace Progra3
         {
             try
             {
-                if (txtPantalla.Text == "" || txtPantalla.Text == " ")
+                if (txtPantalla.Text == "")
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
                 calc.Operando1 = 10;
-                calc.Operador = "potencia";
-                txtPantalla.Text = "";
-                txtTempHist.Text += "10^";
+                calc.Operando2 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.potencia();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text += "10^" + calc.Operando2.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -614,11 +544,11 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
+                calc.Operando2 = Convert.ToDouble(txtPantalla.Text);
                 calc.Operando1 = Math.E;
-                calc.Operador = "potencia";
-                txtPantalla.Text = "";
-                txtTempHist.Text += "e^";
+                calc.UltimaRespuesta = calc.potencia();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text += "e^" + calc.Operando2.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -658,10 +588,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.sin().ToString();
-                txtTempHist.Text += "sin" + op1 + "=" + calc.factorial().ToString();
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.sin();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "sin" + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -678,10 +608,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.cos().ToString();
-                txtTempHist.Text += "cos" + op1 + "=" + calc.cos().ToString();
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.cos();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "cos" + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -698,10 +628,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.tan().ToString();
-                txtTempHist.Text += "tan" + op1 + "=" + calc.tan().ToString();
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.tan();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "tan" + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -718,10 +648,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.asin().ToString();
-                txtTempHist.Text += "sin^-1" + op1 + "=" + txtPantalla.Text;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.asin();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "sin^-1 " + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -737,10 +667,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.acos().ToString();
-                txtTempHist.Text += "cos^-1" + op1 + "=" + txtPantalla.Text;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.acos();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "cos^-1 " + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -756,10 +686,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.atan().ToString();
-                txtTempHist.Text += "tan^-1" + op1 + "=" + txtPantalla.Text;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.atan();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "tan^-1 " + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -775,10 +705,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.sinh().ToString();
-                txtTempHist.Text += "sinh" + op1 + "=" + txtPantalla.Text;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.sinh();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "sinh" + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -794,10 +724,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.cosh().ToString();
-                txtTempHist.Text += "cosh" + op1 + "=" + txtPantalla.Text;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.cosh();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "cosh" + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -813,10 +743,10 @@ namespace Progra3
                 {
                     txtPantalla.Text = "0";
                 }
-                double op1 = Convert.ToDouble(txtPantalla.Text);
-                calc.Operando1 = op1;
-                txtPantalla.Text = calc.tanh().ToString();
-                txtTempHist.Text += "tanh" + op1 + "=" + txtPantalla.Text;
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.UltimaRespuesta = calc.tanh();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                txtTempHist.Text = "tanh" + calc.Operando1.ToString() + "=" + txtPantalla.Text;
             }
             catch (Exception error)
             {
@@ -834,7 +764,7 @@ namespace Progra3
             try
             {
                 txtPantalla.Text += Convert.ToString(Math.E);
-                txtTempHist.Text += "π";
+                txtTempHist.Text += "e";
             }
             catch (Exception error)
             {
@@ -845,6 +775,150 @@ namespace Progra3
         private void button1_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (calc.Operacion == "potencia")
+                {
+                    calc.Operando2 = Convert.ToDouble(txtPantalla.Text);
+                    calc.UltimaRespuesta = calc.potencia();
+                    txtGrafica.Text += calc.Operando2.ToString() + "=" + calc.UltimaRespuesta.ToString();
+                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                    btnOk.Enabled = false;
+                    btnOk.ForeColor = Color.White;
+                    btnIgual.Enabled = true;
+                    btnClear.Enabled = true;
+                } else if (calc.Operacion == "raiz")
+                {
+                    calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                    calc.UltimaRespuesta = calc.raizNum();
+                    txtGrafica.Text += calc.Operando1.ToString() + "=" + calc.UltimaRespuesta.ToString();
+                    txtPantalla.Text = calc.UltimaRespuesta.ToString();
+                    btnOk.Enabled = false;
+                    btnOk.ForeColor = Color.White;
+                    btnIgual.Enabled = true;
+                    btnClear.Enabled = true;
+                }
+                
+
+
+            }
+            catch (Exception error)
+            {
+                txtPantalla.Text = error.ToString();
+            }
+
+
+        }
+
+        private void btnCuadrado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtPantalla.Text == "")
+                {
+                    txtPantalla.Text = "0";
+                }
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.Operando2 = 2;
+                txtTempHist.Text += "^2";
+                calc.UltimaRespuesta = calc.potencia();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+
+            }
+            catch (Exception error)
+            {
+                txtPantalla.Text = Convert.ToString(error);
+            }
+
+        }
+
+        private void btnCubo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtPantalla.Text == "")
+                {
+                    txtPantalla.Text = "0";
+                }
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.Operando2 = 3;
+                txtTempHist.Text += "^3";
+                calc.UltimaRespuesta = calc.potencia();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+
+            }
+            catch (Exception error)
+            {
+                txtPantalla.Text = Convert.ToString(error);
+            }
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtPantalla.Text == "")
+                {
+                    txtPantalla.Text = "0";
+                }
+                calc.Operando1 = Convert.ToDouble(txtPantalla.Text);
+                calc.Operando2 = -1;
+                txtTempHist.Text += "^-1";
+                calc.UltimaRespuesta = calc.potencia();
+                txtPantalla.Text = calc.UltimaRespuesta.ToString();
+
+            }
+            catch (Exception error)
+            {
+                txtPantalla.Text = Convert.ToString(error);
+            }
+        }
+
+        private void btnGrafica_Click(object sender, EventArgs e)
+        {
+            btnX.Enabled = true;
+            btnY.Enabled = true;
+            btnOk.Enabled = true;
+            txtGrafica.Text = txtPantalla.Text;
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtPantalla.Text += "x";
+                txtTempHist.Text += "x";
+                txtGrafica.Text += "x";
+            } catch (Exception error)
+            {
+                txtPantalla.Text = error.ToString();
+            }
+            
+        }
+
+        private void btnY_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtPantalla.Text += "y";
+                txtTempHist.Text += "y";
+                txtGrafica.Text += "y";
+            }
+            catch (Exception error)
+            {
+                txtPantalla.Text = error.ToString();
+            }
+            
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtGrafica.Text = "";
+            btnClear.Enabled = false;
         }
     }
 }

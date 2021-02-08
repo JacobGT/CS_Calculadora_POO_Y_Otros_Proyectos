@@ -73,8 +73,16 @@ namespace Progra3
             this.btnCosInverse = new System.Windows.Forms.Button();
             this.btnHyperTan = new System.Windows.Forms.Button();
             this.btnTanInverse = new System.Windows.Forms.Button();
-            this.btnEuler = new System.Windows.Forms.Button();
             this.btnGraf = new System.Windows.Forms.Button();
+            this.txtGrafica = new System.Windows.Forms.TextBox();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCubo = new System.Windows.Forms.Button();
+            this.btnCuadrado = new System.Windows.Forms.Button();
+            this.btnEuler = new System.Windows.Forms.Button();
+            this.btnY = new System.Windows.Forms.Button();
+            this.btnX = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPantalla
@@ -93,7 +101,7 @@ namespace Progra3
             // btn0
             // 
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(13, 703);
+            this.btn0.Location = new System.Drawing.Point(13, 761);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(75, 40);
             this.btn0.TabIndex = 1;
@@ -104,7 +112,7 @@ namespace Progra3
             // btn9
             // 
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(209, 534);
+            this.btn9.Location = new System.Drawing.Point(209, 592);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(75, 40);
             this.btn9.TabIndex = 2;
@@ -115,7 +123,7 @@ namespace Progra3
             // btn8
             // 
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(112, 534);
+            this.btn8.Location = new System.Drawing.Point(112, 592);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(75, 40);
             this.btn8.TabIndex = 3;
@@ -126,7 +134,7 @@ namespace Progra3
             // btn7
             // 
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(13, 534);
+            this.btn7.Location = new System.Drawing.Point(13, 592);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(75, 40);
             this.btn7.TabIndex = 4;
@@ -137,7 +145,7 @@ namespace Progra3
             // btn6
             // 
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(209, 589);
+            this.btn6.Location = new System.Drawing.Point(209, 647);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(75, 40);
             this.btn6.TabIndex = 5;
@@ -148,7 +156,7 @@ namespace Progra3
             // btn5
             // 
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(112, 589);
+            this.btn5.Location = new System.Drawing.Point(112, 647);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(75, 40);
             this.btn5.TabIndex = 6;
@@ -159,7 +167,7 @@ namespace Progra3
             // btn4
             // 
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(13, 589);
+            this.btn4.Location = new System.Drawing.Point(13, 647);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(75, 40);
             this.btn4.TabIndex = 7;
@@ -170,7 +178,7 @@ namespace Progra3
             // btn3
             // 
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(209, 648);
+            this.btn3.Location = new System.Drawing.Point(209, 706);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(75, 40);
             this.btn3.TabIndex = 8;
@@ -181,7 +189,7 @@ namespace Progra3
             // btn2
             // 
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(112, 648);
+            this.btn2.Location = new System.Drawing.Point(112, 706);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(75, 40);
             this.btn2.TabIndex = 9;
@@ -192,7 +200,7 @@ namespace Progra3
             // btn1
             // 
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(13, 648);
+            this.btn1.Location = new System.Drawing.Point(13, 706);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(75, 40);
             this.btn1.TabIndex = 10;
@@ -203,7 +211,7 @@ namespace Progra3
             // btnPunto
             // 
             this.btnPunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPunto.Location = new System.Drawing.Point(112, 703);
+            this.btnPunto.Location = new System.Drawing.Point(112, 761);
             this.btnPunto.Name = "btnPunto";
             this.btnPunto.Size = new System.Drawing.Size(75, 40);
             this.btnPunto.TabIndex = 11;
@@ -214,7 +222,7 @@ namespace Progra3
             // btnMultiplicar
             // 
             this.btnMultiplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiplicar.Location = new System.Drawing.Point(307, 589);
+            this.btnMultiplicar.Location = new System.Drawing.Point(307, 647);
             this.btnMultiplicar.Name = "btnMultiplicar";
             this.btnMultiplicar.Size = new System.Drawing.Size(75, 40);
             this.btnMultiplicar.TabIndex = 12;
@@ -226,7 +234,7 @@ namespace Progra3
             // btnSumar
             // 
             this.btnSumar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSumar.Location = new System.Drawing.Point(307, 648);
+            this.btnSumar.Location = new System.Drawing.Point(307, 706);
             this.btnSumar.Name = "btnSumar";
             this.btnSumar.Size = new System.Drawing.Size(75, 40);
             this.btnSumar.TabIndex = 13;
@@ -236,19 +244,19 @@ namespace Progra3
             // 
             // btnDividir
             // 
-            this.btnDividir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDividir.Location = new System.Drawing.Point(402, 589);
+            this.btnDividir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDividir.Location = new System.Drawing.Point(402, 647);
             this.btnDividir.Name = "btnDividir";
             this.btnDividir.Size = new System.Drawing.Size(75, 40);
             this.btnDividir.TabIndex = 14;
-            this.btnDividir.Text = "%";
+            this.btnDividir.Text = "÷";
             this.btnDividir.UseVisualStyleBackColor = true;
             this.btnDividir.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnRestar
             // 
             this.btnRestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestar.Location = new System.Drawing.Point(402, 648);
+            this.btnRestar.Location = new System.Drawing.Point(402, 706);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(75, 40);
             this.btnRestar.TabIndex = 15;
@@ -259,7 +267,7 @@ namespace Progra3
             // btnIgual
             // 
             this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIgual.Location = new System.Drawing.Point(402, 703);
+            this.btnIgual.Location = new System.Drawing.Point(402, 761);
             this.btnIgual.Name = "btnIgual";
             this.btnIgual.Size = new System.Drawing.Size(75, 40);
             this.btnIgual.TabIndex = 16;
@@ -272,7 +280,7 @@ namespace Progra3
             this.btnStartOver.BackColor = System.Drawing.Color.Red;
             this.btnStartOver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartOver.Location = new System.Drawing.Point(402, 534);
+            this.btnStartOver.Location = new System.Drawing.Point(402, 592);
             this.btnStartOver.Name = "btnStartOver";
             this.btnStartOver.Size = new System.Drawing.Size(75, 40);
             this.btnStartOver.TabIndex = 17;
@@ -283,7 +291,7 @@ namespace Progra3
             // btnPositivoNegativo
             // 
             this.btnPositivoNegativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPositivoNegativo.Location = new System.Drawing.Point(13, 419);
+            this.btnPositivoNegativo.Location = new System.Drawing.Point(17, 419);
             this.btnPositivoNegativo.Name = "btnPositivoNegativo";
             this.btnPositivoNegativo.Size = new System.Drawing.Size(75, 40);
             this.btnPositivoNegativo.TabIndex = 19;
@@ -296,7 +304,7 @@ namespace Progra3
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(307, 534);
+            this.btnDelete.Location = new System.Drawing.Point(307, 592);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 40);
             this.btnDelete.TabIndex = 20;
@@ -308,7 +316,7 @@ namespace Progra3
             // 
             this.btnParenthesisRight.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnParenthesisRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParenthesisRight.Location = new System.Drawing.Point(112, 307);
+            this.btnParenthesisRight.Location = new System.Drawing.Point(401, 534);
             this.btnParenthesisRight.Name = "btnParenthesisRight";
             this.btnParenthesisRight.Size = new System.Drawing.Size(75, 40);
             this.btnParenthesisRight.TabIndex = 21;
@@ -320,7 +328,7 @@ namespace Progra3
             // 
             this.btnParenthesisLeft.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnParenthesisLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParenthesisLeft.Location = new System.Drawing.Point(13, 307);
+            this.btnParenthesisLeft.Location = new System.Drawing.Point(302, 534);
             this.btnParenthesisLeft.Name = "btnParenthesisLeft";
             this.btnParenthesisLeft.Size = new System.Drawing.Size(75, 40);
             this.btnParenthesisLeft.TabIndex = 22;
@@ -345,7 +353,7 @@ namespace Progra3
             // btnValorAbsoluto
             // 
             this.btnValorAbsoluto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValorAbsoluto.Location = new System.Drawing.Point(13, 475);
+            this.btnValorAbsoluto.Location = new System.Drawing.Point(112, 475);
             this.btnValorAbsoluto.Name = "btnValorAbsoluto";
             this.btnValorAbsoluto.Size = new System.Drawing.Size(75, 40);
             this.btnValorAbsoluto.TabIndex = 24;
@@ -357,7 +365,7 @@ namespace Progra3
             // 
             this.btnCosine.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnCosine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCosine.Location = new System.Drawing.Point(307, 363);
+            this.btnCosine.Location = new System.Drawing.Point(114, 361);
             this.btnCosine.Name = "btnCosine";
             this.btnCosine.Size = new System.Drawing.Size(75, 40);
             this.btnCosine.TabIndex = 26;
@@ -369,7 +377,7 @@ namespace Progra3
             // 
             this.btnTangent.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTangent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTangent.Location = new System.Drawing.Point(402, 363);
+            this.btnTangent.Location = new System.Drawing.Point(209, 361);
             this.btnTangent.Name = "btnTangent";
             this.btnTangent.Size = new System.Drawing.Size(75, 40);
             this.btnTangent.TabIndex = 27;
@@ -381,7 +389,7 @@ namespace Progra3
             // 
             this.btnSeno.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSeno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeno.Location = new System.Drawing.Point(209, 363);
+            this.btnSeno.Location = new System.Drawing.Point(16, 361);
             this.btnSeno.Name = "btnSeno";
             this.btnSeno.Size = new System.Drawing.Size(75, 40);
             this.btnSeno.TabIndex = 28;
@@ -392,7 +400,7 @@ namespace Progra3
             // btnAnswer
             // 
             this.btnAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnswer.Location = new System.Drawing.Point(307, 703);
+            this.btnAnswer.Location = new System.Drawing.Point(307, 761);
             this.btnAnswer.Name = "btnAnswer";
             this.btnAnswer.Size = new System.Drawing.Size(75, 40);
             this.btnAnswer.TabIndex = 31;
@@ -402,19 +410,21 @@ namespace Progra3
             // 
             // btnPotencia
             // 
+            this.btnPotencia.BackColor = System.Drawing.Color.Black;
             this.btnPotencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPotencia.Location = new System.Drawing.Point(112, 475);
+            this.btnPotencia.ForeColor = System.Drawing.Color.White;
+            this.btnPotencia.Location = new System.Drawing.Point(13, 534);
             this.btnPotencia.Name = "btnPotencia";
             this.btnPotencia.Size = new System.Drawing.Size(75, 40);
             this.btnPotencia.TabIndex = 32;
-            this.btnPotencia.Text = "^";
-            this.btnPotencia.UseVisualStyleBackColor = true;
+            this.btnPotencia.Text = "xⁿ";
+            this.btnPotencia.UseVisualStyleBackColor = false;
             this.btnPotencia.Click += new System.EventHandler(this.btnPotencia_Click);
             // 
             // btnFactorial
             // 
             this.btnFactorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFactorial.Location = new System.Drawing.Point(209, 703);
+            this.btnFactorial.Location = new System.Drawing.Point(209, 761);
             this.btnFactorial.Name = "btnFactorial";
             this.btnFactorial.Size = new System.Drawing.Size(75, 40);
             this.btnFactorial.TabIndex = 33;
@@ -435,7 +445,7 @@ namespace Progra3
             // 
             // btnLog
             // 
-            this.btnLog.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLog.BackColor = System.Drawing.Color.Gold;
             this.btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLog.Location = new System.Drawing.Point(112, 419);
             this.btnLog.Name = "btnLog";
@@ -447,7 +457,7 @@ namespace Progra3
             // 
             // btnLn
             // 
-            this.btnLn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLn.BackColor = System.Drawing.Color.Gold;
             this.btnLn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLn.Location = new System.Drawing.Point(209, 419);
             this.btnLn.Name = "btnLn";
@@ -461,7 +471,7 @@ namespace Progra3
             // 
             this.btnPi.BackColor = System.Drawing.Color.Yellow;
             this.btnPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPi.Location = new System.Drawing.Point(13, 363);
+            this.btnPi.Location = new System.Drawing.Point(302, 305);
             this.btnPi.Name = "btnPi";
             this.btnPi.Size = new System.Drawing.Size(75, 40);
             this.btnPi.TabIndex = 37;
@@ -471,49 +481,50 @@ namespace Progra3
             // 
             // btnRaizCubica
             // 
-            this.btnRaizCubica.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRaizCubica.BackColor = System.Drawing.SystemColors.Control;
             this.btnRaizCubica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRaizCubica.Location = new System.Drawing.Point(307, 475);
             this.btnRaizCubica.Name = "btnRaizCubica";
             this.btnRaizCubica.Size = new System.Drawing.Size(75, 40);
             this.btnRaizCubica.TabIndex = 38;
-            this.btnRaizCubica.Text = "3√";
+            this.btnRaizCubica.Text = "³√";
             this.btnRaizCubica.UseVisualStyleBackColor = false;
             this.btnRaizCubica.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnRaizX
             // 
-            this.btnRaizX.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRaizX.BackColor = System.Drawing.Color.Black;
             this.btnRaizX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaizX.ForeColor = System.Drawing.Color.White;
             this.btnRaizX.Location = new System.Drawing.Point(402, 475);
             this.btnRaizX.Name = "btnRaizX";
             this.btnRaizX.Size = new System.Drawing.Size(75, 40);
             this.btnRaizX.TabIndex = 39;
-            this.btnRaizX.Text = "x√";
+            this.btnRaizX.Text = "ˣ√";
             this.btnRaizX.UseVisualStyleBackColor = false;
             this.btnRaizX.Click += new System.EventHandler(this.btnRaizX_Click);
             // 
             // btn10x
             // 
-            this.btn10x.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn10x.BackColor = System.Drawing.Color.PaleGreen;
             this.btn10x.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn10x.Location = new System.Drawing.Point(307, 419);
             this.btn10x.Name = "btn10x";
             this.btn10x.Size = new System.Drawing.Size(75, 40);
             this.btn10x.TabIndex = 40;
-            this.btn10x.Text = "10^x";
+            this.btn10x.Text = "10ˣ";
             this.btn10x.UseVisualStyleBackColor = false;
             this.btn10x.Click += new System.EventHandler(this.btn10x_Click);
             // 
             // btnex
             // 
-            this.btnex.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnex.BackColor = System.Drawing.Color.PaleGreen;
             this.btnex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnex.Location = new System.Drawing.Point(402, 419);
             this.btnex.Name = "btnex";
             this.btnex.Size = new System.Drawing.Size(75, 40);
             this.btnex.TabIndex = 41;
-            this.btnex.Text = "e^x";
+            this.btnex.Text = "eˣ";
             this.btnex.UseVisualStyleBackColor = false;
             this.btnex.Click += new System.EventHandler(this.btnex_Click);
             // 
@@ -521,11 +532,11 @@ namespace Progra3
             // 
             this.btnSinInverse.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSinInverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSinInverse.Location = new System.Drawing.Point(112, 245);
+            this.btnSinInverse.Location = new System.Drawing.Point(17, 247);
             this.btnSinInverse.Name = "btnSinInverse";
-            this.btnSinInverse.Size = new System.Drawing.Size(106, 40);
+            this.btnSinInverse.Size = new System.Drawing.Size(75, 40);
             this.btnSinInverse.TabIndex = 43;
-            this.btnSinInverse.Text = "sin^-1";
+            this.btnSinInverse.Text = "sin⁻¹";
             this.btnSinInverse.UseVisualStyleBackColor = false;
             this.btnSinInverse.Click += new System.EventHandler(this.btnSinInverse_Click);
             // 
@@ -533,7 +544,7 @@ namespace Progra3
             // 
             this.btnHyperSin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnHyperSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHyperSin.Location = new System.Drawing.Point(209, 307);
+            this.btnHyperSin.Location = new System.Drawing.Point(16, 305);
             this.btnHyperSin.Name = "btnHyperSin";
             this.btnHyperSin.Size = new System.Drawing.Size(75, 40);
             this.btnHyperSin.TabIndex = 44;
@@ -545,7 +556,7 @@ namespace Progra3
             // 
             this.btnHyperCos.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnHyperCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHyperCos.Location = new System.Drawing.Point(307, 307);
+            this.btnHyperCos.Location = new System.Drawing.Point(114, 305);
             this.btnHyperCos.Name = "btnHyperCos";
             this.btnHyperCos.Size = new System.Drawing.Size(75, 40);
             this.btnHyperCos.TabIndex = 46;
@@ -557,11 +568,11 @@ namespace Progra3
             // 
             this.btnCosInverse.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnCosInverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCosInverse.Location = new System.Drawing.Point(241, 245);
+            this.btnCosInverse.Location = new System.Drawing.Point(114, 247);
             this.btnCosInverse.Name = "btnCosInverse";
-            this.btnCosInverse.Size = new System.Drawing.Size(106, 40);
+            this.btnCosInverse.Size = new System.Drawing.Size(75, 40);
             this.btnCosInverse.TabIndex = 45;
-            this.btnCosInverse.Text = "cos^-1";
+            this.btnCosInverse.Text = "cos⁻¹";
             this.btnCosInverse.UseVisualStyleBackColor = false;
             this.btnCosInverse.Click += new System.EventHandler(this.btnCosInverse_Click);
             // 
@@ -569,7 +580,7 @@ namespace Progra3
             // 
             this.btnHyperTan.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnHyperTan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHyperTan.Location = new System.Drawing.Point(402, 307);
+            this.btnHyperTan.Location = new System.Drawing.Point(209, 305);
             this.btnHyperTan.Name = "btnHyperTan";
             this.btnHyperTan.Size = new System.Drawing.Size(75, 40);
             this.btnHyperTan.TabIndex = 48;
@@ -581,29 +592,17 @@ namespace Progra3
             // 
             this.btnTanInverse.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTanInverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTanInverse.Location = new System.Drawing.Point(371, 245);
+            this.btnTanInverse.Location = new System.Drawing.Point(209, 247);
             this.btnTanInverse.Name = "btnTanInverse";
-            this.btnTanInverse.Size = new System.Drawing.Size(106, 40);
+            this.btnTanInverse.Size = new System.Drawing.Size(75, 40);
             this.btnTanInverse.TabIndex = 47;
-            this.btnTanInverse.Text = "tan^-1";
+            this.btnTanInverse.Text = "tan⁻¹";
             this.btnTanInverse.UseVisualStyleBackColor = false;
             this.btnTanInverse.Click += new System.EventHandler(this.btnTanInverse_Click);
             // 
-            // btnEuler
-            // 
-            this.btnEuler.BackColor = System.Drawing.Color.Yellow;
-            this.btnEuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEuler.Location = new System.Drawing.Point(112, 363);
-            this.btnEuler.Name = "btnEuler";
-            this.btnEuler.Size = new System.Drawing.Size(75, 40);
-            this.btnEuler.TabIndex = 49;
-            this.btnEuler.Text = "e";
-            this.btnEuler.UseVisualStyleBackColor = false;
-            this.btnEuler.Click += new System.EventHandler(this.btnEuler_Click);
-            // 
             // btnGraf
             // 
-            this.btnGraf.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnGraf.BackColor = System.Drawing.Color.Lime;
             this.btnGraf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraf.Location = new System.Drawing.Point(12, 180);
             this.btnGraf.Name = "btnGraf";
@@ -611,14 +610,135 @@ namespace Progra3
             this.btnGraf.TabIndex = 50;
             this.btnGraf.Text = "graficadora";
             this.btnGraf.UseVisualStyleBackColor = false;
-            this.btnGraf.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnGraf.Click += new System.EventHandler(this.btnGrafica_Click);
+            // 
+            // txtGrafica
+            // 
+            this.txtGrafica.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtGrafica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrafica.ForeColor = System.Drawing.Color.Red;
+            this.txtGrafica.Location = new System.Drawing.Point(175, 180);
+            this.txtGrafica.Multiline = true;
+            this.txtGrafica.Name = "txtGrafica";
+            this.txtGrafica.ReadOnly = true;
+            this.txtGrafica.Size = new System.Drawing.Size(302, 43);
+            this.txtGrafica.TabIndex = 51;
+            // 
+            // btnOk
+            // 
+            this.btnOk.BackColor = System.Drawing.Color.Black;
+            this.btnOk.Enabled = false;
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOk.Location = new System.Drawing.Point(407, 247);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 40);
+            this.btnOk.TabIndex = 52;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnCubo
+            // 
+            this.btnCubo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCubo.Location = new System.Drawing.Point(209, 534);
+            this.btnCubo.Name = "btnCubo";
+            this.btnCubo.Size = new System.Drawing.Size(75, 40);
+            this.btnCubo.TabIndex = 53;
+            this.btnCubo.Text = "x³";
+            this.btnCubo.UseVisualStyleBackColor = true;
+            this.btnCubo.Click += new System.EventHandler(this.btnCubo_Click);
+            // 
+            // btnCuadrado
+            // 
+            this.btnCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuadrado.Location = new System.Drawing.Point(112, 534);
+            this.btnCuadrado.Name = "btnCuadrado";
+            this.btnCuadrado.Size = new System.Drawing.Size(75, 40);
+            this.btnCuadrado.TabIndex = 54;
+            this.btnCuadrado.Text = "x²";
+            this.btnCuadrado.UseVisualStyleBackColor = true;
+            this.btnCuadrado.Click += new System.EventHandler(this.btnCuadrado_Click);
+            // 
+            // btnEuler
+            // 
+            this.btnEuler.BackColor = System.Drawing.Color.Yellow;
+            this.btnEuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEuler.Location = new System.Drawing.Point(401, 305);
+            this.btnEuler.Name = "btnEuler";
+            this.btnEuler.Size = new System.Drawing.Size(75, 40);
+            this.btnEuler.TabIndex = 49;
+            this.btnEuler.Text = "e";
+            this.btnEuler.UseVisualStyleBackColor = false;
+            this.btnEuler.Click += new System.EventHandler(this.btnEuler_Click);
+            // 
+            // btnY
+            // 
+            this.btnY.BackColor = System.Drawing.Color.Cyan;
+            this.btnY.Enabled = false;
+            this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnY.Location = new System.Drawing.Point(401, 361);
+            this.btnY.Name = "btnY";
+            this.btnY.Size = new System.Drawing.Size(75, 40);
+            this.btnY.TabIndex = 55;
+            this.btnY.Text = "Y";
+            this.btnY.UseVisualStyleBackColor = false;
+            this.btnY.Click += new System.EventHandler(this.btnY_Click);
+            // 
+            // btnX
+            // 
+            this.btnX.BackColor = System.Drawing.Color.Cyan;
+            this.btnX.Enabled = false;
+            this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnX.Location = new System.Drawing.Point(306, 361);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(75, 40);
+            this.btnX.TabIndex = 56;
+            this.btnX.Text = "X";
+            this.btnX.UseVisualStyleBackColor = false;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(17, 475);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 40);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "x⁻¹";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_3);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Black;
+            this.btnClear.Enabled = false;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.Location = new System.Drawing.Point(302, 247);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 40);
+            this.btnClear.TabIndex = 58;
+            this.btnClear.Text = "CLR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(494, 811);
+            this.ClientSize = new System.Drawing.Size(494, 821);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnX);
+            this.Controls.Add(this.btnY);
+            this.Controls.Add(this.btnCuadrado);
+            this.Controls.Add(this.btnCubo);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.txtGrafica);
             this.Controls.Add(this.btnGraf);
             this.Controls.Add(this.btnEuler);
             this.Controls.Add(this.btnHyperTan);
@@ -719,7 +839,15 @@ namespace Progra3
         private System.Windows.Forms.Button btnCosInverse;
         private System.Windows.Forms.Button btnHyperTan;
         private System.Windows.Forms.Button btnTanInverse;
-        private System.Windows.Forms.Button btnEuler;
         private System.Windows.Forms.Button btnGraf;
+        private System.Windows.Forms.TextBox txtGrafica;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnCubo;
+        private System.Windows.Forms.Button btnCuadrado;
+        private System.Windows.Forms.Button btnEuler;
+        private System.Windows.Forms.Button btnY;
+        private System.Windows.Forms.Button btnX;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
     }
 }
