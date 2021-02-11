@@ -123,13 +123,13 @@ namespace Progra3
             btnAceptar.PerformClick();
             btnClear.PerformClick();
 
-            txtExtra.Text = "Nombre: " + txtNombre.Text + "\r\n" +
-                "Apellido: " + txtApellido.Text + "\r\n" +
-                "Edad: " + txtEdad.Text + "\r\n" +
-                "Profesion: " + txtProfesion.Text + "\r\n" +
-                "Puesto: " + txtPuesto.Text + "\r\n" +
-                "Sueldo: " + txtSueldo.Text + "\r\n" +
-                "Curso: " + txtCurso.Text;
+            txtExtra.Text = "Nombre: " + profe.Nombre + "\r\n" +
+                "Apellido: " + profe.Apellido + "\r\n" +
+                "Edad: " + profe.Edad + "\r\n" +
+                "Profesion: " + profe.Profession + "\r\n" +
+                "Puesto: " + profe.Puesto + "\r\n" +
+                "Sueldo: " + profe.Sueldo + "\r\n" +
+                "Curso: " + profe.Curso;
         }
 
         private void btnSaludar_Click(object sender, EventArgs e)

@@ -181,8 +181,11 @@ namespace Progra3
 
         public double igual()
         {
+            // DataTable es una estructura de datos que nos permite guardar informacion tabulada
             System.Data.DataTable table = new System.Data.DataTable();
+            // Este es el quivalente al metodo .Eval() en python
             ultimaRespuesta = Convert.ToDouble(table.Compute(this.expresion.ToString(), String.Empty));
+            // Y sirve como que si fueran operaciones en Excel
             return ultimaRespuesta;
         }
     }

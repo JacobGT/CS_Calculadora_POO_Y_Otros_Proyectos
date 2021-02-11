@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// Es muy importante importar la libreria de abajo, para que funcionen los metodos de los charts.
+using System.Windows.Forms.DataVisualization.Charting;
+
 
 namespace Progra3
 {
@@ -14,6 +17,7 @@ namespace Progra3
     {
 
         calcular calc = new calcular();
+        graficar graf = new graficar();
 
         public frmCalculadora()
         {
@@ -101,11 +105,24 @@ namespace Progra3
 
         private void btnStartOver_Click(object sender, EventArgs e)
         {
-            txtPantalla.Text = "";
-            txtTempHist.Text = "";
-            txtGrafica.Text = "";
-            calc.Operando1 = 0;
-            calc.Operando1 = 0;
+            try
+            {
+                txtPantalla.Text = "";
+                txtTempHist.Text = "";
+                txtGrafica.Text = "";
+                btnFuncX.Enabled = true;
+                btnX.Enabled = true;
+                calc.Operando1 = 0;
+                calc.Operando1 = 0;
+                lblVar.Text = "";
+                for (int i = 0; i < graf.NumFunc; i++)
+                {
+                    chart1.Series[i].Points.Clear();
+                }
+            } catch (Exception error)
+            {
+            }
+            
         }
 
         private void btnSumar_Click(object sender, EventArgs e)
@@ -198,7 +215,6 @@ namespace Progra3
                 txtTempHist.Text = txtTempHist.Text.Substring(0, (txtTempHist.Text.Length - 1));
             } catch (Exception error)
             {
-                txtPantalla.Text = Convert.ToString(error);
             }
             
         }
@@ -300,6 +316,9 @@ namespace Progra3
                 case 'π':
                     btnPi.PerformClick();
                     break;
+                case 'x':
+                    btnX.PerformClick();
+                    break;
                 default:
                     break;
             }
@@ -333,11 +352,6 @@ namespace Progra3
                 txtPantalla.Text = error.ToString();
             }
             
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -880,19 +894,43 @@ namespace Progra3
 
         private void btnGrafica_Click(object sender, EventArgs e)
         {
-            btnX.Enabled = true;
-            btnY.Enabled = true;
-            btnOk.Enabled = true;
-            txtGrafica.Text = txtPantalla.Text;
+            try
+            {
+                // Mostramos como funciona la graficadora y los requerimientos
+                MessageBox.Show("Para que la gráficadora funcione, la equacion TIENE" +
+                    "\n que estár de esta forma:" +
+                    "\n x + n = y   O   y + n = x" +
+                    "\n f(x) = x    O   f(y)=y", "Instrucciones", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                // Cambiamos de tamaño la calculadora para que se puedan ver lo elementos necesarios para graficar
+                this.Size = new Size(1000, 700);
+                // Desactivamos botones que provoquen posibles errores y los que no vayamos a ultilizar
+                // Y activamos los que si utilizaremos
+                btnOk.Enabled = true;
+                btnPotencia.Enabled = false;
+                btnCuadrado.Enabled = false;
+                btnCubo.Enabled = false;
+                btnIgual.Enabled = false;
+                btnGrafCuadrado.Enabled = false;
+                //btnGrafCubo.Enabled = false;
+                btnGraf.Enabled = false;
+                btnGraficarLinea.Enabled = false;
+                btnGraficarPunto.Enabled = false;
+            } catch (Exception error)
+            {
+                txtPantalla.Text = error.ToString();
+            }
+            
+
         }
 
         private void btnX_Click(object sender, EventArgs e)
         {
             try
             {
+                btnGrafCuadrado.Enabled = false;
                 txtPantalla.Text += "x";
                 txtTempHist.Text += "x";
-                txtGrafica.Text += "x";
+                graf.SinPotencia = true;
             } catch (Exception error)
             {
                 txtPantalla.Text = error.ToString();
@@ -906,7 +944,7 @@ namespace Progra3
             {
                 txtPantalla.Text += "y";
                 txtTempHist.Text += "y";
-                txtGrafica.Text += "y";
+                graf.SinPotencia = true;
             }
             catch (Exception error)
             {
@@ -919,6 +957,172 @@ namespace Progra3
         {
             txtGrafica.Text = "";
             btnClear.Enabled = false;
+        }
+
+        private void btnFuncX_Click(object sender, EventArgs e)
+        {
+            lblVar.Text = "= y";
+            btnGrafCuadrado.Enabled = true;
+            //btnGrafCubo.Enabled = true;
+            btnGraficarLinea.Enabled = true;
+            btnGraficarPunto.Enabled = true;
+            btnX.Enabled = true;
+        }
+
+        private void btnFuncY_Click(object sender, EventArgs e)
+        {
+            lblVar.Text = "= y";
+            btnFuncX.Enabled = false;
+            btnGrafCuadrado.Enabled = true;
+            //btnGrafCubo.Enabled = true;
+            btnGraficarLinea.Enabled = true;
+            btnGraficarPunto.Enabled = true;
+        }
+
+        private void frmCalculadora_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCloseGraf_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(400, 700);
+            lblVar.Text = "";
+
+        }
+
+        private void btnGrafCuadrado_Click(object sender, EventArgs e)
+        {
+            btnX.Enabled = false;
+            txtPantalla.Text += "x**2";
+            graf.Cuadrado = true;
+            
+        }
+
+        private void btnGrafCubo_Click(object sender, EventArgs e)
+        {
+            txtPantalla.Text += "x**3";
+            graf.Cuadrado = true;
+        }
+
+        private void btnGraficarLinea_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string seriesName1 = "f" + graf.NumFunc;
+                Series ecuacion = chart1.Series.Add(seriesName1);
+
+                ecuacion.ChartArea = chart1.ChartAreas[0].Name;
+                ecuacion.Name = seriesName1;
+                ecuacion.ChartType = SeriesChartType.Line;
+
+                graf.Funcion = txtPantalla.Text;
+                if (txtPrueba1.Text == "")
+                {
+                    graf.Pruebas[0] = 0.0;
+                }
+                else
+                {
+                    graf.Pruebas[0] = Convert.ToDouble(txtPrueba1.Text);
+                }
+                if (txtPrueba2.Text == "")
+                {
+                    graf.Pruebas[1] = 1.0;
+                }
+                else
+                {
+                    graf.Pruebas[1] = Convert.ToDouble(txtPrueba2.Text);
+                }
+                if (txtPrueba3.Text == "")
+                {
+                    graf.Pruebas[2] = 2.0;
+                }
+                else
+                {
+                    graf.Pruebas[2] = Convert.ToDouble(txtPrueba3.Text);
+                }
+                if (txtPrueba4.Text == "")
+                {
+                    graf.Pruebas[3] = 3.0;
+                }
+                else
+                {
+                    graf.Pruebas[3] = Convert.ToDouble(txtPrueba4.Text);
+                }
+                if (txtPrueba5.Text == "")
+                {
+                    graf.Pruebas[4] = 4.0;
+                }
+                else
+                {
+                    graf.Pruebas[4] = Convert.ToDouble(txtPrueba5.Text);
+                }
+
+
+
+                if (graf.SinPotencia == true)
+                {
+                    graf.Solucion = graf.graficarLineaX();
+                    graf.SinPotencia = false;
+                }
+                if (graf.Cuadrado == true)
+                {
+                    graf.Solucion = graf.graficarLineaXCuadrado();
+                    graf.Cuadrado = false;
+                }
+                if (graf.Cubo == true)
+                {
+                    graf.Solucion = graf.graficarLineaXCubo();
+                    graf.Cubo = false;
+                }
+
+
+                lblPrueba1.Text = "= " + graf.Solucion[0].ToString();
+                lblPrueba2.Text = "= " + graf.Solucion[1].ToString();
+                lblPrueba3.Text = "= " + graf.Solucion[2].ToString();
+                lblPrueba4.Text = "= " + graf.Solucion[3].ToString();
+                lblPrueba5.Text = "= " + graf.Solucion[4].ToString();
+
+                chart1.ChartAreas[0].AxisX.Title = "x";
+                chart1.ChartAreas[0].AxisY.Title = "y";
+                for (int i = 0; i < 5; i++)
+                {
+                    chart1.Series["f" + graf.NumFunc.ToString()].Points.AddXY(graf.Pruebas[i], graf.Solucion[i]);
+                }
+                graf.NumFunc++;
+            }
+            catch (Exception error)
+            {
+                txtPantalla.Text = error.ToString();
+            }
+
+        }
+
+        private void btnGraficarPunto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string seriesName1 = "pt" + graf.NumPuntos;
+                Series punto = chart1.Series.Add(seriesName1);
+
+                punto.ChartArea = chart1.ChartAreas[0].Name;
+                punto.Name = seriesName1;
+                punto.ChartType = SeriesChartType.Point;
+
+                graf.Expresion = txtPantalla.Text;
+                graf.Punto = graf.graficarPunto();
+                chart1.Series["pt1"].Points.AddXY(graf.Punto[0], graf.Punto[1]);
+            }
+            catch (Exception error)
+            {
+                txtPantalla.Text = error.ToString();
+            }
+        }
+
+        private void btnComa_Click(object sender, EventArgs e)
+        {
+            txtPantalla.Text += ",";
+            txtTempHist.Text += ",";
         }
     }
 }

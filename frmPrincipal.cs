@@ -59,5 +59,15 @@ namespace Progra3
             profe.MdiParent = this;
             profe.Show();
         }
+
+        private void graficadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void ejemplosDePOOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +82,7 @@
     <Compile Include="frmSumar.Designer.cs">
       <DependentUpon>frmSumar.cs</DependentUpon>
     </Compile>
+    <Compile Include="graficar.cs" />
     <Compile Include="persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

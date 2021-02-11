@@ -60,25 +60,26 @@ namespace Progra3
             this.ejemplosDePOOToolStripMenuItem.Name = "ejemplosDePOOToolStripMenuItem";
             this.ejemplosDePOOToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.ejemplosDePOOToolStripMenuItem.Text = "Ejemplos de POO";
+            this.ejemplosDePOOToolStripMenuItem.Click += new System.EventHandler(this.ejemplosDePOOToolStripMenuItem_Click);
             // 
             // sumar2NumerosToolStripMenuItem
             // 
             this.sumar2NumerosToolStripMenuItem.Name = "sumar2NumerosToolStripMenuItem";
-            this.sumar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.sumar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sumar2NumerosToolStripMenuItem.Text = "Sumar 2 numeros";
             this.sumar2NumerosToolStripMenuItem.Click += new System.EventHandler(this.sumar2NumerosToolStripMenuItem_Click);
             // 
             // restar2NumerosToolStripMenuItem
             // 
             this.restar2NumerosToolStripMenuItem.Name = "restar2NumerosToolStripMenuItem";
-            this.restar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.restar2NumerosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.restar2NumerosToolStripMenuItem.Text = "Restar 2 numeros";
             this.restar2NumerosToolStripMenuItem.Click += new System.EventHandler(this.restar2NumerosToolStripMenuItem_Click);
             // 
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
@@ -87,14 +88,14 @@ namespace Progra3
             this.herenciaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.catedraticoToolStripMenuItem});
             this.herenciaToolStripMenuItem.Name = "herenciaToolStripMenuItem";
-            this.herenciaToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.herenciaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.herenciaToolStripMenuItem.Text = "Herencia";
             this.herenciaToolStripMenuItem.Click += new System.EventHandler(this.herenciaToolStripMenuItem_Click);
             // 
             // catedraticoToolStripMenuItem
             // 
             this.catedraticoToolStripMenuItem.Name = "catedraticoToolStripMenuItem";
-            this.catedraticoToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.catedraticoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.catedraticoToolStripMenuItem.Text = "Catedratico";
             this.catedraticoToolStripMenuItem.Click += new System.EventHandler(this.catedraticoToolStripMenuItem_Click);
             // 

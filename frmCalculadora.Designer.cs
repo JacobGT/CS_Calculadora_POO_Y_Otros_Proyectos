@@ -29,6 +29,8 @@ namespace Progra3
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.txtPantalla = new System.Windows.Forms.TextBox();
             this.btn0 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
@@ -79,10 +81,32 @@ namespace Progra3
             this.btnCubo = new System.Windows.Forms.Button();
             this.btnCuadrado = new System.Windows.Forms.Button();
             this.btnEuler = new System.Windows.Forms.Button();
-            this.btnY = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnGrafCuadrado = new System.Windows.Forms.Button();
+            this.btnFuncX = new System.Windows.Forms.Button();
+            this.lblVar = new System.Windows.Forms.Label();
+            this.btnGraficarLinea = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPrueba1 = new System.Windows.Forms.TextBox();
+            this.txtPrueba2 = new System.Windows.Forms.TextBox();
+            this.txtPrueba3 = new System.Windows.Forms.TextBox();
+            this.txtPrueba4 = new System.Windows.Forms.TextBox();
+            this.txtPrueba5 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnGraficarPunto = new System.Windows.Forms.Button();
+            this.lblPrueba1 = new System.Windows.Forms.Label();
+            this.lblPrueba2 = new System.Windows.Forms.Label();
+            this.lblPrueba3 = new System.Windows.Forms.Label();
+            this.lblPrueba4 = new System.Windows.Forms.Label();
+            this.lblPrueba5 = new System.Windows.Forms.Label();
+            this.btnCloseGraf = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnComa = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPantalla
@@ -92,7 +116,7 @@ namespace Progra3
             this.txtPantalla.Multiline = true;
             this.txtPantalla.Name = "txtPantalla";
             this.txtPantalla.ReadOnly = true;
-            this.txtPantalla.Size = new System.Drawing.Size(464, 88);
+            this.txtPantalla.Size = new System.Drawing.Size(464, 101);
             this.txtPantalla.TabIndex = 0;
             this.txtPantalla.TextChanged += new System.EventHandler(this.txtPantalla_TextChanged);
             this.txtPantalla.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPantalla_KeyDown);
@@ -342,11 +366,11 @@ namespace Progra3
             this.txtTempHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTempHist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTempHist.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtTempHist.Location = new System.Drawing.Point(12, 7);
+            this.txtTempHist.Location = new System.Drawing.Point(12, 12);
             this.txtTempHist.Multiline = true;
             this.txtTempHist.Name = "txtTempHist";
             this.txtTempHist.ReadOnly = true;
-            this.txtTempHist.Size = new System.Drawing.Size(464, 60);
+            this.txtTempHist.Size = new System.Drawing.Size(464, 55);
             this.txtTempHist.TabIndex = 23;
             this.txtTempHist.TextChanged += new System.EventHandler(this.txtTempHist_TextChanged);
             // 
@@ -604,9 +628,9 @@ namespace Progra3
             // 
             this.btnGraf.BackColor = System.Drawing.Color.Lime;
             this.btnGraf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraf.Location = new System.Drawing.Point(12, 180);
+            this.btnGraf.Location = new System.Drawing.Point(307, 357);
             this.btnGraf.Name = "btnGraf";
-            this.btnGraf.Size = new System.Drawing.Size(136, 48);
+            this.btnGraf.Size = new System.Drawing.Size(169, 48);
             this.btnGraf.TabIndex = 50;
             this.btnGraf.Text = "graficadora";
             this.btnGraf.UseVisualStyleBackColor = false;
@@ -617,11 +641,11 @@ namespace Progra3
             this.txtGrafica.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtGrafica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrafica.ForeColor = System.Drawing.Color.Red;
-            this.txtGrafica.Location = new System.Drawing.Point(175, 180);
+            this.txtGrafica.Location = new System.Drawing.Point(17, 180);
             this.txtGrafica.Multiline = true;
             this.txtGrafica.Name = "txtGrafica";
             this.txtGrafica.ReadOnly = true;
-            this.txtGrafica.Size = new System.Drawing.Size(302, 43);
+            this.txtGrafica.Size = new System.Drawing.Size(460, 43);
             this.txtGrafica.TabIndex = 51;
             // 
             // btnOk
@@ -673,29 +697,16 @@ namespace Progra3
             this.btnEuler.UseVisualStyleBackColor = false;
             this.btnEuler.Click += new System.EventHandler(this.btnEuler_Click);
             // 
-            // btnY
-            // 
-            this.btnY.BackColor = System.Drawing.Color.Cyan;
-            this.btnY.Enabled = false;
-            this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnY.Location = new System.Drawing.Point(401, 361);
-            this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(75, 40);
-            this.btnY.TabIndex = 55;
-            this.btnY.Text = "Y";
-            this.btnY.UseVisualStyleBackColor = false;
-            this.btnY.Click += new System.EventHandler(this.btnY_Click);
-            // 
             // btnX
             // 
             this.btnX.BackColor = System.Drawing.Color.Cyan;
             this.btnX.Enabled = false;
             this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX.Location = new System.Drawing.Point(306, 361);
+            this.btnX.Location = new System.Drawing.Point(705, 656);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(75, 40);
+            this.btnX.Size = new System.Drawing.Size(75, 36);
             this.btnX.TabIndex = 56;
-            this.btnX.Text = "X";
+            this.btnX.Text = "x";
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
@@ -725,16 +736,258 @@ namespace Progra3
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // chart1
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(615, 12);
+            this.chart1.Name = "chart1";
+            this.chart1.Size = new System.Drawing.Size(626, 585);
+            this.chart1.TabIndex = 51;
+            this.chart1.Text = "Grafica";
+            // 
+            // btnGrafCuadrado
+            // 
+            this.btnGrafCuadrado.BackColor = System.Drawing.Color.Cyan;
+            this.btnGrafCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrafCuadrado.Location = new System.Drawing.Point(617, 656);
+            this.btnGrafCuadrado.Name = "btnGrafCuadrado";
+            this.btnGrafCuadrado.Size = new System.Drawing.Size(82, 35);
+            this.btnGrafCuadrado.TabIndex = 62;
+            this.btnGrafCuadrado.Text = "x²";
+            this.btnGrafCuadrado.UseVisualStyleBackColor = false;
+            this.btnGrafCuadrado.Click += new System.EventHandler(this.btnGrafCuadrado_Click);
+            // 
+            // btnFuncX
+            // 
+            this.btnFuncX.BackColor = System.Drawing.Color.Cyan;
+            this.btnFuncX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncX.Location = new System.Drawing.Point(617, 615);
+            this.btnFuncX.Name = "btnFuncX";
+            this.btnFuncX.Size = new System.Drawing.Size(163, 35);
+            this.btnFuncX.TabIndex = 60;
+            this.btnFuncX.Text = "x = f(x)";
+            this.btnFuncX.UseVisualStyleBackColor = false;
+            this.btnFuncX.Click += new System.EventHandler(this.btnFuncX_Click);
+            // 
+            // lblVar
+            // 
+            this.lblVar.AutoSize = true;
+            this.lblVar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVar.Location = new System.Drawing.Point(494, 102);
+            this.lblVar.Name = "lblVar";
+            this.lblVar.Size = new System.Drawing.Size(0, 29);
+            this.lblVar.TabIndex = 64;
+            // 
+            // btnGraficarLinea
+            // 
+            this.btnGraficarLinea.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnGraficarLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficarLinea.Location = new System.Drawing.Point(617, 756);
+            this.btnGraficarLinea.Name = "btnGraficarLinea";
+            this.btnGraficarLinea.Size = new System.Drawing.Size(192, 48);
+            this.btnGraficarLinea.TabIndex = 65;
+            this.btnGraficarLinea.Text = "graficar";
+            this.btnGraficarLinea.UseVisualStyleBackColor = false;
+            this.btnGraficarLinea.Click += new System.EventHandler(this.btnGraficarLinea_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(820, 608);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 40);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Puntos a probar de la gráfica\r\nNO es obligatorio";
+            // 
+            // txtPrueba1
+            // 
+            this.txtPrueba1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrueba1.Location = new System.Drawing.Point(824, 654);
+            this.txtPrueba1.Name = "txtPrueba1";
+            this.txtPrueba1.Size = new System.Drawing.Size(48, 27);
+            this.txtPrueba1.TabIndex = 68;
+            this.txtPrueba1.Text = "0";
+            // 
+            // txtPrueba2
+            // 
+            this.txtPrueba2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrueba2.Location = new System.Drawing.Point(824, 682);
+            this.txtPrueba2.Name = "txtPrueba2";
+            this.txtPrueba2.Size = new System.Drawing.Size(48, 27);
+            this.txtPrueba2.TabIndex = 69;
+            this.txtPrueba2.Text = "1";
+            // 
+            // txtPrueba3
+            // 
+            this.txtPrueba3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrueba3.Location = new System.Drawing.Point(824, 710);
+            this.txtPrueba3.Name = "txtPrueba3";
+            this.txtPrueba3.Size = new System.Drawing.Size(48, 27);
+            this.txtPrueba3.TabIndex = 70;
+            this.txtPrueba3.Text = "2";
+            // 
+            // txtPrueba4
+            // 
+            this.txtPrueba4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrueba4.Location = new System.Drawing.Point(824, 740);
+            this.txtPrueba4.Name = "txtPrueba4";
+            this.txtPrueba4.Size = new System.Drawing.Size(48, 27);
+            this.txtPrueba4.TabIndex = 71;
+            this.txtPrueba4.Text = "3";
+            // 
+            // txtPrueba5
+            // 
+            this.txtPrueba5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrueba5.Location = new System.Drawing.Point(824, 768);
+            this.txtPrueba5.Name = "txtPrueba5";
+            this.txtPrueba5.Size = new System.Drawing.Size(48, 27);
+            this.txtPrueba5.TabIndex = 72;
+            this.txtPrueba5.Text = "4";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(1047, 649);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 136);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1064, 610);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(224, 80);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "Agregar Puntos a Grafica\r\nTiene que ir de este formato:\r\nx,y     (separados por c" +
+    "omas\r\nsin espacio entre numeros)";
+            // 
+            // btnGraficarPunto
+            // 
+            this.btnGraficarPunto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnGraficarPunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficarPunto.Location = new System.Drawing.Point(1068, 718);
+            this.btnGraficarPunto.Name = "btnGraficarPunto";
+            this.btnGraficarPunto.Size = new System.Drawing.Size(173, 48);
+            this.btnGraficarPunto.TabIndex = 76;
+            this.btnGraficarPunto.Text = "agregar punto";
+            this.btnGraficarPunto.UseVisualStyleBackColor = false;
+            this.btnGraficarPunto.Click += new System.EventHandler(this.btnGraficarPunto_Click);
+            // 
+            // lblPrueba1
+            // 
+            this.lblPrueba1.AutoSize = true;
+            this.lblPrueba1.Location = new System.Drawing.Point(896, 664);
+            this.lblPrueba1.Name = "lblPrueba1";
+            this.lblPrueba1.Size = new System.Drawing.Size(0, 17);
+            this.lblPrueba1.TabIndex = 77;
+            // 
+            // lblPrueba2
+            // 
+            this.lblPrueba2.AutoSize = true;
+            this.lblPrueba2.Location = new System.Drawing.Point(896, 693);
+            this.lblPrueba2.Name = "lblPrueba2";
+            this.lblPrueba2.Size = new System.Drawing.Size(0, 17);
+            this.lblPrueba2.TabIndex = 78;
+            // 
+            // lblPrueba3
+            // 
+            this.lblPrueba3.AutoSize = true;
+            this.lblPrueba3.Location = new System.Drawing.Point(896, 719);
+            this.lblPrueba3.Name = "lblPrueba3";
+            this.lblPrueba3.Size = new System.Drawing.Size(0, 17);
+            this.lblPrueba3.TabIndex = 79;
+            // 
+            // lblPrueba4
+            // 
+            this.lblPrueba4.AutoSize = true;
+            this.lblPrueba4.Location = new System.Drawing.Point(896, 749);
+            this.lblPrueba4.Name = "lblPrueba4";
+            this.lblPrueba4.Size = new System.Drawing.Size(0, 17);
+            this.lblPrueba4.TabIndex = 80;
+            // 
+            // lblPrueba5
+            // 
+            this.lblPrueba5.AutoSize = true;
+            this.lblPrueba5.Location = new System.Drawing.Point(896, 774);
+            this.lblPrueba5.Name = "lblPrueba5";
+            this.lblPrueba5.Size = new System.Drawing.Size(0, 17);
+            this.lblPrueba5.TabIndex = 81;
+            // 
+            // btnCloseGraf
+            // 
+            this.btnCloseGraf.BackColor = System.Drawing.Color.Red;
+            this.btnCloseGraf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCloseGraf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseGraf.Location = new System.Drawing.Point(1068, 774);
+            this.btnCloseGraf.Name = "btnCloseGraf";
+            this.btnCloseGraf.Size = new System.Drawing.Size(221, 30);
+            this.btnCloseGraf.TabIndex = 82;
+            this.btnCloseGraf.Text = "Cerrar Graficadora";
+            this.btnCloseGraf.UseVisualStyleBackColor = false;
+            this.btnCloseGraf.Click += new System.EventHandler(this.btnCloseGraf_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(619, 700);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 40);
+            this.label4.TabIndex = 83;
+            this.label4.Text = "Ejemplo de formato\r\ncorrecto:    2x-3\r\n";
+            // 
+            // btnComa
+            // 
+            this.btnComa.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnComa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComa.ForeColor = System.Drawing.Color.Black;
+            this.btnComa.Location = new System.Drawing.Point(1247, 725);
+            this.btnComa.Name = "btnComa";
+            this.btnComa.Size = new System.Drawing.Size(39, 32);
+            this.btnComa.TabIndex = 84;
+            this.btnComa.Text = ",";
+            this.btnComa.UseVisualStyleBackColor = false;
+            this.btnComa.Click += new System.EventHandler(this.btnComa_Click);
+            // 
             // frmCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(494, 821);
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ClientSize = new System.Drawing.Size(490, 816);
+            this.Controls.Add(this.btnComa);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnCloseGraf);
+            this.Controls.Add(this.lblPrueba5);
+            this.Controls.Add(this.lblPrueba4);
+            this.Controls.Add(this.lblPrueba3);
+            this.Controls.Add(this.lblPrueba2);
+            this.Controls.Add(this.lblPrueba1);
+            this.Controls.Add(this.btnGraficarPunto);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPrueba5);
+            this.Controls.Add(this.txtPrueba4);
+            this.Controls.Add(this.txtPrueba3);
+            this.Controls.Add(this.txtPrueba2);
+            this.Controls.Add(this.txtPrueba1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnGraficarLinea);
+            this.Controls.Add(this.lblVar);
+            this.Controls.Add(this.btnGrafCuadrado);
+            this.Controls.Add(this.btnFuncX);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnX);
-            this.Controls.Add(this.btnY);
             this.Controls.Add(this.btnCuadrado);
             this.Controls.Add(this.btnCubo);
             this.Controls.Add(this.btnOk);
@@ -787,7 +1040,9 @@ namespace Progra3
             this.Controls.Add(this.txtPantalla);
             this.Name = "frmCalculadora";
             this.Text = "frmCalculadora";
+            this.Load += new System.EventHandler(this.frmCalculadora_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmCalculadora_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -845,9 +1100,30 @@ namespace Progra3
         private System.Windows.Forms.Button btnCubo;
         private System.Windows.Forms.Button btnCuadrado;
         private System.Windows.Forms.Button btnEuler;
-        private System.Windows.Forms.Button btnY;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button btnGrafCuadrado;
+        private System.Windows.Forms.Button btnFuncX;
+        private System.Windows.Forms.Label lblVar;
+        private System.Windows.Forms.Button btnGraficarLinea;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPrueba1;
+        private System.Windows.Forms.TextBox txtPrueba2;
+        private System.Windows.Forms.TextBox txtPrueba3;
+        private System.Windows.Forms.TextBox txtPrueba4;
+        private System.Windows.Forms.TextBox txtPrueba5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGraficarPunto;
+        private System.Windows.Forms.Label lblPrueba1;
+        private System.Windows.Forms.Label lblPrueba2;
+        private System.Windows.Forms.Label lblPrueba3;
+        private System.Windows.Forms.Label lblPrueba4;
+        private System.Windows.Forms.Label lblPrueba5;
+        private System.Windows.Forms.Button btnCloseGraf;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnComa;
     }
 }
