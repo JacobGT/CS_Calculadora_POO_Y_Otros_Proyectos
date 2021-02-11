@@ -988,6 +988,15 @@ namespace Progra3
         {
             this.Size = new Size(400, 700);
             lblVar.Text = "";
+            btnOk.Enabled = false;
+            btnPotencia.Enabled = true;
+            btnCuadrado.Enabled = true;
+            btnCubo.Enabled = true;
+            btnIgual.Enabled = true;
+            btnGrafCuadrado.Enabled = true;
+            btnGraf.Enabled = true;
+            btnGraficarLinea.Enabled = false;
+            btnGraficarPunto.Enabled = false;
 
         }
 
