@@ -4,11 +4,14 @@ Parcial 1 para el curso de Programacion 3 - Ing. Sistemas USPG
 
 # Calculadora
 ![Calculator Image](Images/frmCalculadora.png)
+![Calculator Instructions Alert](Images/frmCalculadoraAlert.jpeg)
+![Calculadora Graficadora](Images/frmCalculadoraGraficadora.jpeg)
 - Operaciones Básicas: Suma, Resta, Multiplicación y División ✅
 - Operaciones Unarias: Potencia, Raíz, Logaritmos Naturales y de base 10, ✅
 - Funciones Trigonométricas: Seno, Coseno, Tangente y las funciones inversas. ✅
 - Teclas Especiales y constantes: Pi, e, factorial ✅
-- Graficadora❌ (En producción)
+- Graficadora✅
+- Más funciones (Probablemente no, ya que está en version final)❌
 
 ## Formulário Principal
 ![frmPrincipal Image](Images/EjemplosPOO.png)
