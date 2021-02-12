@@ -93,6 +93,7 @@ namespace Progra3
                 txtPuesto.ReadOnly = true;
                 txtSueldo.ReadOnly = true;
                 txtCurso.ReadOnly = true;
+                txtNotaEstudiante.ReadOnly = true;
             } catch (Exception error)
             {
                 txtExtra.Text = error.ToString();
@@ -115,6 +116,7 @@ namespace Progra3
             txtPuesto.ReadOnly = false;
             txtSueldo.ReadOnly = false;
             txtCurso.ReadOnly = false;
+            txtNotaEstudiante.ReadOnly = false;
         }
 
         private void btnMostrarInfo_Click(object sender, EventArgs e)
@@ -188,6 +190,7 @@ namespace Progra3
             txtPuesto.Text = "";
             txtSueldo.Text = "";
             txtCurso.Text = "";
+            txtNotaEstudiante.Text = "";
         }
 
         private void btnDecirNombre_Click(object sender, EventArgs e)
@@ -213,7 +216,7 @@ namespace Progra3
             {
                 txtNotaEstudiante.Text = "0";
             }
-            txtNotaEstudiante.Text = profe.DarNota(txtNotaEstudiante.Text);
+            txtExtra.Text += "\r\n" + profe.DarNota(txtNotaEstudiante.Text);
         }
     }
 }
