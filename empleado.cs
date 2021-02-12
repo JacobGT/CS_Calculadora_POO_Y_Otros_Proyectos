@@ -10,6 +10,25 @@ namespace Progra3
     {
         private string profesion, puesto;
         private double sueldo;
+        // otra solucion es cambiar el acces modifier por un protected en lugar de hacer sus getters y setters
+        private double tazaHoraExtra = 0;
+
+        public empleado(double horaExtra)
+        {
+            tazaHoraExtra = horaExtra;
+        }
+
+        public double TazaHoraExtra
+        {
+            get
+            {
+                return this.tazaHoraExtra;
+            }
+            set
+            {
+                this.tazaHoraExtra = value;
+            }
+        }
 
         public string Profession
         {
@@ -61,8 +80,18 @@ namespace Progra3
         
         public double calcularHoraExtra()
         {
-            return this.sueldo/30 * 1.5;
+            return this.sueldo/30 * tazaHoraExtra;
 
+        }
+
+        public string escribirMiNombre(string Nombre)
+        {
+            return "Hola, mi nombre de empleado es" + Nombre;
+        }
+
+        public string contestarLlamadas()
+        {
+            return "Hola, soy un empleado... ¿Quien habla y como le puedo ayudar?";
         }
     }
 }

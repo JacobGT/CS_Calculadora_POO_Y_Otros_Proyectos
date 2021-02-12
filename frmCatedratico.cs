@@ -13,8 +13,7 @@ namespace Progra3
     public partial class frmCatedratico : Form
     {
 
-        catedratico profe = new catedratico();
-
+        catedratico profe = new catedratico(1.5);
         public frmCatedratico()
         {
             InitializeComponent();
@@ -189,6 +188,32 @@ namespace Progra3
             txtPuesto.Text = "";
             txtSueldo.Text = "";
             txtCurso.Text = "";
+        }
+
+        private void btnDecirNombre_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "" && txtApellido.Text != "")
+            {
+                txtExtra.Text += profe.escribirMiNombre(profe.Nombre, profe.Apellido);
+            }
+            else if (txtNombre.Text != "")
+            {
+                txtExtra.Text += profe.escribirMiNombre(profe.Nombre);
+            }
+        }
+
+        private void frmCatedratico_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtNotaEstudiante.Text == "")
+            {
+                txtNotaEstudiante.Text = "0";
+            }
+            txtNotaEstudiante.Text = profe.DarNota(txtNotaEstudiante.Text);
         }
     }
 }

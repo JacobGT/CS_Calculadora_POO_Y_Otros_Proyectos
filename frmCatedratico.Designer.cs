@@ -55,6 +55,10 @@ namespace Progra3
             this.btnClear = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnDecirNombre = new System.Windows.Forms.Button();
+            this.txtNotaEstudiante = new System.Windows.Forms.TextBox();
+            this.lblNota = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -190,7 +194,7 @@ namespace Progra3
             // 
             // btnSaludar
             // 
-            this.btnSaludar.Location = new System.Drawing.Point(45, 449);
+            this.btnSaludar.Location = new System.Drawing.Point(113, 449);
             this.btnSaludar.Name = "btnSaludar";
             this.btnSaludar.Size = new System.Drawing.Size(75, 23);
             this.btnSaludar.TabIndex = 11;
@@ -200,7 +204,7 @@ namespace Progra3
             // 
             // btnCalcularHorasExtra
             // 
-            this.btnCalcularHorasExtra.Location = new System.Drawing.Point(349, 502);
+            this.btnCalcularHorasExtra.Location = new System.Drawing.Point(356, 502);
             this.btnCalcularHorasExtra.Name = "btnCalcularHorasExtra";
             this.btnCalcularHorasExtra.Size = new System.Drawing.Size(177, 23);
             this.btnCalcularHorasExtra.TabIndex = 14;
@@ -210,7 +214,7 @@ namespace Progra3
             // 
             // btnContestarLlamada
             // 
-            this.btnContestarLlamada.Location = new System.Drawing.Point(237, 449);
+            this.btnContestarLlamada.Location = new System.Drawing.Point(252, 449);
             this.btnContestarLlamada.Name = "btnContestarLlamada";
             this.btnContestarLlamada.Size = new System.Drawing.Size(157, 23);
             this.btnContestarLlamada.TabIndex = 13;
@@ -220,7 +224,7 @@ namespace Progra3
             // 
             // btnCalcularIgss
             // 
-            this.btnCalcularIgss.Location = new System.Drawing.Point(109, 502);
+            this.btnCalcularIgss.Location = new System.Drawing.Point(160, 502);
             this.btnCalcularIgss.Name = "btnCalcularIgss";
             this.btnCalcularIgss.Size = new System.Drawing.Size(138, 23);
             this.btnCalcularIgss.TabIndex = 12;
@@ -260,7 +264,7 @@ namespace Progra3
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(520, 449);
+            this.btnClear.Location = new System.Drawing.Point(577, 502);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(96, 23);
             this.btnClear.TabIndex = 15;
@@ -287,11 +291,51 @@ namespace Progra3
             this.label4.TabIndex = 25;
             this.label4.Text = "Q";
             // 
+            // btnDecirNombre
+            // 
+            this.btnDecirNombre.Location = new System.Drawing.Point(12, 502);
+            this.btnDecirNombre.Name = "btnDecirNombre";
+            this.btnDecirNombre.Size = new System.Drawing.Size(117, 23);
+            this.btnDecirNombre.TabIndex = 26;
+            this.btnDecirNombre.Text = "Decir nombre";
+            this.btnDecirNombre.UseVisualStyleBackColor = true;
+            this.btnDecirNombre.Click += new System.EventHandler(this.btnDecirNombre_Click);
+            // 
+            // txtNotaEstudiante
+            // 
+            this.txtNotaEstudiante.Location = new System.Drawing.Point(522, 146);
+            this.txtNotaEstudiante.Name = "txtNotaEstudiante";
+            this.txtNotaEstudiante.Size = new System.Drawing.Size(164, 22);
+            this.txtNotaEstudiante.TabIndex = 27;
+            // 
+            // lblNota
+            // 
+            this.lblNota.AutoSize = true;
+            this.lblNota.Location = new System.Drawing.Point(540, 126);
+            this.lblNota.Name = "lblNota";
+            this.lblNota.Size = new System.Drawing.Size(133, 17);
+            this.lblNota.TabIndex = 28;
+            this.lblNota.Text = "Nota de Estudiante:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(522, 449);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Poner nota";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmCatedratico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 820);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblNota);
+            this.Controls.Add(this.txtNotaEstudiante);
+            this.Controls.Add(this.btnDecirNombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnClear);
@@ -320,6 +364,7 @@ namespace Progra3
             this.Controls.Add(this.label1);
             this.Name = "frmCatedratico";
             this.Text = "frmCatedratico";
+            this.Load += new System.EventHandler(this.frmCatedratico_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +398,9 @@ namespace Progra3
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnDecirNombre;
+        private System.Windows.Forms.TextBox txtNotaEstudiante;
+        private System.Windows.Forms.Label lblNota;
+        private System.Windows.Forms.Button button1;
     }
 }

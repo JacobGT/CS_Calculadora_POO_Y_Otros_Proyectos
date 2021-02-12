@@ -47,6 +47,11 @@ namespace Progra3
             }
         }
 
+        public string DarNota()
+        {
+            return "Tu nota es: ";
+        }
+
         public string Saludar()
         {
             return "Hola!";
@@ -55,6 +60,11 @@ namespace Progra3
         public string contestarLlamadas()
         {
             return "Bueno... ¿Quien habla?";
+        }
+
+        public string escribirMiNombre(string Nombre)
+        {
+            return "Hola, mi nombre es" + Nombre;
         }
     }
 }
