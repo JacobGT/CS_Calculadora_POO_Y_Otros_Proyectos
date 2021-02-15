@@ -319,6 +319,9 @@ namespace Progra3
                 case 'x':
                     btnX.PerformClick();
                     break;
+                case ',':
+                    btnComa.PerformClick();
+                    break;
                 default:
                     break;
             }
@@ -1111,16 +1114,17 @@ namespace Progra3
         {
             try
             {
-                string seriesName1 = "pt" + graf.NumPuntos;
-                Series punto = chart1.Series.Add(seriesName1);
+                string seriesName2 = "pt" + graf.NumPuntos;
+                Series punto = chart1.Series.Add(seriesName2);
 
                 punto.ChartArea = chart1.ChartAreas[0].Name;
-                punto.Name = seriesName1;
+                punto.Name = seriesName2;
                 punto.ChartType = SeriesChartType.Point;
 
                 graf.Expresion = txtPantalla.Text;
                 graf.Punto = graf.graficarPunto();
-                chart1.Series["pt1"].Points.AddXY(graf.Punto[0], graf.Punto[1]);
+                chart1.Series["pt" + graf.NumPuntos].Points.AddXY(graf.Punto[0], graf.Punto[1]);
+                graf.NumPuntos++;
             }
             catch (Exception error)
             {
