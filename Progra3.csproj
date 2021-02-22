@@ -64,6 +64,12 @@
     <Compile Include="frmCatedratico.Designer.cs">
       <DependentUpon>frmCatedratico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarca.Designer.cs">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,11 @@
     </Compile>
     <Compile Include="graficar.cs" />
     <Compile Include="persona.cs" />
+    <Compile Include="progra3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>progra3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCalculadora.resx">
@@ -91,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatedratico.resx">
       <DependentUpon>frmCatedratico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarca.resx">
+      <DependentUpon>frmMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -110,6 +124,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="progra3.xsc">
+      <DependentUpon>progra3.xsd</DependentUpon>
+    </None>
+    <None Include="progra3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>progra3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="progra3.xss">
+      <DependentUpon>progra3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

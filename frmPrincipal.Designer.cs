@@ -36,6 +36,8 @@ namespace Progra3
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catedraticoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,8 @@ namespace Progra3
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ejemplosDePOOToolStripMenuItem});
+            this.ejemplosDePOOToolStripMenuItem,
+            this.mantenimientosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1330, 28);
@@ -95,9 +98,24 @@ namespace Progra3
             // catedraticoToolStripMenuItem
             // 
             this.catedraticoToolStripMenuItem.Name = "catedraticoToolStripMenuItem";
-            this.catedraticoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.catedraticoToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.catedraticoToolStripMenuItem.Text = "Catedratico";
             this.catedraticoToolStripMenuItem.Click += new System.EventHandler(this.catedraticoToolStripMenuItem_Click);
+            // 
+            // mantenimientosToolStripMenuItem
+            // 
+            this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.marcaToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
+            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
+            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
+            // 
+            // marcaToolStripMenuItem
+            // 
+            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.marcaToolStripMenuItem.Text = "Marca";
+            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -132,6 +150,8 @@ namespace Progra3
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem herenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem catedraticoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
     }
 }
 
