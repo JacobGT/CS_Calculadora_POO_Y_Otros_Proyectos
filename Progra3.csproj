@@ -51,7 +51,22 @@
     <Compile Include="alumno.cs" />
     <Compile Include="calcular.cs" />
     <Compile Include="catedratico.cs" />
+    <Compile Include="cliente.cs" />
+    <Compile Include="contacto.cs" />
+    <Compile Include="departamento.cs" />
     <Compile Include="empleado.cs" />
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFactorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFactorial.Designer.cs">
+      <DependentUpon>frmFactorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalculadora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,17 +79,41 @@
     <Compile Include="frmCatedratico.Designer.cs">
       <DependentUpon>frmCatedratico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFibonacci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFibonacci.Designer.cs">
+      <DependentUpon>frmFibonacci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListas.Designer.cs">
+      <DependentUpon>frmListas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMarca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMarca.Designer.cs">
       <DependentUpon>frmMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModelo.Designer.cs">
+      <DependentUpon>frmModelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRestar.cs">
       <SubType>Form</SubType>
@@ -89,6 +128,10 @@
       <DependentUpon>frmSumar.cs</DependentUpon>
     </Compile>
     <Compile Include="graficar.cs" />
+    <Compile Include="industrias.cs" />
+    <Compile Include="Lista.cs" />
+    <Compile Include="municipios.cs" />
+    <Compile Include="Nodo.cs" />
     <Compile Include="persona.cs" />
     <Compile Include="progra3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -97,17 +140,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFactorial.resx">
+      <DependentUpon>frmFactorial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCalculadora.resx">
       <DependentUpon>frmCalculadora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatedratico.resx">
       <DependentUpon>frmCatedratico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFibonacci.resx">
+      <DependentUpon>frmFibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListas.resx">
+      <DependentUpon>frmListas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMarca.resx">
       <DependentUpon>frmMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmModelo.resx">
+      <DependentUpon>frmModelo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRestar.resx">
       <DependentUpon>frmRestar.cs</DependentUpon>

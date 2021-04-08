@@ -76,5 +76,52 @@ namespace Progra3
             marca.MdiParent = this;
             marca.Show();
         }
+
+        private void fibonacciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFibonacci fib = new frmFibonacci();
+            fib.MdiParent = this;
+            fib.Show();
+        }
+
+        private void factorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFactorial factorial = new frmFactorial();
+            factorial.MdiParent = this;
+            factorial.Show();
+        }
+
+        private void modeloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModelo model = new frmModelo();
+            model.MdiParent = this;
+            model.Show();
+        }
+
+        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProducto producto = new frmProducto();
+            producto.MdiParent = this;
+            producto.Show();
+        }
+
+        private void parcial2MantenimientoListasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tablaClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes clientes = new frmClientes();
+            clientes.MdiParent = this;
+            clientes.Show();
+        }
+
+        private void ejemploIngresarYVisualizarListasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListas lists = new frmListas();
+            lists.MdiParent = this;
+            lists.Show();
+        }
     }
 }
