@@ -123,5 +123,40 @@ namespace Progra3
             lists.MdiParent = this;
             lists.Show();
         }
+
+        private void tablaDeContactosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContacto contact = new frmContacto();
+            contact.MdiParent = this;
+            contact.Show();
+        }
+
+        private void tablaDepartamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDepartamento department = new frmDepartamento();
+            department.MdiParent = this;
+            department.Show();
+        }
+
+        private void tablaMunicipiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMunicipios muni = new frmMunicipios();
+            muni.MdiParent = this;
+            muni.Show();
+        }
+
+        private void tablaIndustriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIndustrias industry = new frmIndustrias();
+            industry.MdiParent = this;
+            industry.Show();
+        }
+
+        private void cREDITOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCredito credit = new frmCredito();
+            credit.MdiParent = this;
+            credit.Show();
+        }
     }
 }

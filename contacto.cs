@@ -8,7 +8,14 @@ namespace Progra3
 {
     class contacto
     {
-        float id_contacto, id_cliente;
-        string nombre_contacto, correo, telefono;
+        private int id_contacto, id_cliente;
+        private string nombre_cliente, correo, telefono;
+
+        public int Id_Contacto { get; set; }
+        public int Id_Cliente { get; set; }
+
+        public string Nombre_Cliente { get; set; }
+        public string Correo { get; set; }
+        public string Telefono { get; set; }
     }
 }

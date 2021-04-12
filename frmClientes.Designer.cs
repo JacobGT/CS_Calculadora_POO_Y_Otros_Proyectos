@@ -31,6 +31,7 @@ namespace Progra3
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dtpDiasCredito = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -57,25 +58,28 @@ namespace Progra3
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCredito = new System.Windows.Forms.TextBox();
-            this.txtDiasCredito = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.idclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iddepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idindustriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creditoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diascreditoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clientesTableAdapter = new Progra3.progra3TableAdapters.clientesTableAdapter();
             this.municipiosTableAdapter = new Progra3.progra3TableAdapters.municipiosTableAdapter();
             this.industriasTableAdapter = new Progra3.progra3TableAdapters.industriasTableAdapter();
             this.departamentosTableAdapter = new Progra3.progra3TableAdapters.departamentosTableAdapter();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.municipiosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.departamentosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.industriasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.iddepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idindustriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.creditoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diascreditoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -87,6 +91,10 @@ namespace Progra3
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.industriasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -97,6 +105,7 @@ namespace Progra3
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.dtpDiasCredito);
             this.splitContainer1.Panel1.Controls.Add(this.btnBuscar);
             this.splitContainer1.Panel1.Controls.Add(this.btnEditar);
             this.splitContainer1.Panel1.Controls.Add(this.btnEliminar);
@@ -119,8 +128,8 @@ namespace Progra3
             this.splitContainer1.Panel1.Controls.Add(this.txtDireccion);
             this.splitContainer1.Panel1.Controls.Add(this.txtTelefono);
             this.splitContainer1.Panel1.Controls.Add(this.txtCredito);
-            this.splitContainer1.Panel1.Controls.Add(this.txtDiasCredito);
             this.splitContainer1.Panel1.Controls.Add(this.txtID);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -130,9 +139,16 @@ namespace Progra3
             this.splitContainer1.SplitterDistance = 593;
             this.splitContainer1.TabIndex = 0;
             // 
+            // dtpDiasCredito
+            // 
+            this.dtpDiasCredito.Location = new System.Drawing.Point(321, 393);
+            this.dtpDiasCredito.Name = "dtpDiasCredito";
+            this.dtpDiasCredito.Size = new System.Drawing.Size(245, 22);
+            this.dtpDiasCredito.TabIndex = 40;
+            // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(345, 558);
+            this.btnBuscar.Location = new System.Drawing.Point(342, 585);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(149, 58);
             this.btnBuscar.TabIndex = 39;
@@ -142,7 +158,7 @@ namespace Progra3
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(81, 558);
+            this.btnEditar.Location = new System.Drawing.Point(78, 585);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(149, 58);
             this.btnEditar.TabIndex = 38;
@@ -152,7 +168,7 @@ namespace Progra3
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(345, 474);
+            this.btnEliminar.Location = new System.Drawing.Point(342, 501);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(149, 58);
             this.btnEliminar.TabIndex = 37;
@@ -162,13 +178,15 @@ namespace Progra3
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(81, 474);
+            this.btnAgregar.Location = new System.Drawing.Point(78, 501);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(149, 58);
             this.btnAgregar.TabIndex = 32;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregar.Enter += new System.EventHandler(this.btnAgregar_Enter);
+            this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
             // 
             // checkEstado
             // 
@@ -229,11 +247,12 @@ namespace Progra3
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(307, 377);
+            this.label14.Location = new System.Drawing.Point(318, 373);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 17);
+            this.label14.Size = new System.Drawing.Size(243, 85);
             this.label14.TabIndex = 23;
-            this.label14.Text = "Días Credito:";
+            this.label14.Text = "Días Credito:\r\n\r\n\r\n(Seleccione el día en el que el cliente\r\n tiene que realizar s" +
+    "u pago)";
             // 
             // label13
             // 
@@ -352,13 +371,6 @@ namespace Progra3
             this.txtCredito.Size = new System.Drawing.Size(163, 22);
             this.txtCredito.TabIndex = 5;
             // 
-            // txtDiasCredito
-            // 
-            this.txtDiasCredito.Location = new System.Drawing.Point(403, 374);
-            this.txtDiasCredito.Name = "txtDiasCredito";
-            this.txtDiasCredito.Size = new System.Drawing.Size(163, 22);
-            this.txtDiasCredito.TabIndex = 4;
-            // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(108, 38);
@@ -394,96 +406,6 @@ namespace Progra3
             this.dgvClientes.Size = new System.Drawing.Size(1186, 710);
             this.dgvClientes.TabIndex = 1;
             // 
-            // idclienteDataGridViewTextBoxColumn
-            // 
-            this.idclienteDataGridViewTextBoxColumn.DataPropertyName = "id_cliente";
-            this.idclienteDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idclienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idclienteDataGridViewTextBoxColumn.Name = "idclienteDataGridViewTextBoxColumn";
-            this.idclienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idclienteDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descripcionclienteDataGridViewTextBoxColumn
-            // 
-            this.descripcionclienteDataGridViewTextBoxColumn.DataPropertyName = "descripcion_cliente";
-            this.descripcionclienteDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionclienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionclienteDataGridViewTextBoxColumn.Name = "descripcionclienteDataGridViewTextBoxColumn";
-            this.descripcionclienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionclienteDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.direccionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telefonoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idmunicipioDataGridViewTextBoxColumn
-            // 
-            this.idmunicipioDataGridViewTextBoxColumn.DataPropertyName = "id_municipio";
-            this.idmunicipioDataGridViewTextBoxColumn.HeaderText = "Municipio";
-            this.idmunicipioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idmunicipioDataGridViewTextBoxColumn.Name = "idmunicipioDataGridViewTextBoxColumn";
-            this.idmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idmunicipioDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iddepartamentoDataGridViewTextBoxColumn
-            // 
-            this.iddepartamentoDataGridViewTextBoxColumn.DataPropertyName = "id_departamento";
-            this.iddepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento";
-            this.iddepartamentoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iddepartamentoDataGridViewTextBoxColumn.Name = "iddepartamentoDataGridViewTextBoxColumn";
-            this.iddepartamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iddepartamentoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idindustriaDataGridViewTextBoxColumn
-            // 
-            this.idindustriaDataGridViewTextBoxColumn.DataPropertyName = "id_industria";
-            this.idindustriaDataGridViewTextBoxColumn.HeaderText = "Industria";
-            this.idindustriaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idindustriaDataGridViewTextBoxColumn.Name = "idindustriaDataGridViewTextBoxColumn";
-            this.idindustriaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idindustriaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // creditoDataGridViewTextBoxColumn
-            // 
-            this.creditoDataGridViewTextBoxColumn.DataPropertyName = "credito";
-            this.creditoDataGridViewTextBoxColumn.HeaderText = "Credito";
-            this.creditoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.creditoDataGridViewTextBoxColumn.Name = "creditoDataGridViewTextBoxColumn";
-            this.creditoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.creditoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // diascreditoDataGridViewTextBoxColumn
-            // 
-            this.diascreditoDataGridViewTextBoxColumn.DataPropertyName = "dias_credito";
-            this.diascreditoDataGridViewTextBoxColumn.HeaderText = "Días Credito";
-            this.diascreditoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.diascreditoDataGridViewTextBoxColumn.Name = "diascreditoDataGridViewTextBoxColumn";
-            this.diascreditoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.diascreditoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // estadoDataGridViewCheckBoxColumn
-            // 
-            this.estadoDataGridViewCheckBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
-            this.estadoDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.estadoDataGridViewCheckBoxColumn.Width = 125;
-            // 
             // clientesBindingSource
             // 
             this.clientesBindingSource.DataMember = "clientes";
@@ -518,6 +440,132 @@ namespace Progra3
             // 
             this.departamentosTableAdapter.ClearBeforeFill = true;
             // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "clientes";
+            this.clientesBindingSource1.DataSource = this.progra3;
+            // 
+            // municipiosBindingSource1
+            // 
+            this.municipiosBindingSource1.DataMember = "municipios";
+            this.municipiosBindingSource1.DataSource = this.progra3;
+            // 
+            // departamentosBindingSource1
+            // 
+            this.departamentosBindingSource1.DataMember = "departamentos";
+            this.departamentosBindingSource1.DataSource = this.progra3;
+            // 
+            // industriasBindingSource1
+            // 
+            this.industriasBindingSource1.DataMember = "industrias";
+            this.industriasBindingSource1.DataSource = this.progra3;
+            // 
+            // idclienteDataGridViewTextBoxColumn
+            // 
+            this.idclienteDataGridViewTextBoxColumn.DataPropertyName = "id_cliente";
+            this.idclienteDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idclienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idclienteDataGridViewTextBoxColumn.Name = "idclienteDataGridViewTextBoxColumn";
+            this.idclienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idclienteDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idclienteDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descripcionclienteDataGridViewTextBoxColumn
+            // 
+            this.descripcionclienteDataGridViewTextBoxColumn.DataPropertyName = "descripcion_cliente";
+            this.descripcionclienteDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionclienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionclienteDataGridViewTextBoxColumn.Name = "descripcionclienteDataGridViewTextBoxColumn";
+            this.descripcionclienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionclienteDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.direccionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telefonoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idmunicipioDataGridViewTextBoxColumn
+            // 
+            this.idmunicipioDataGridViewTextBoxColumn.DataPropertyName = "id_municipio";
+            this.idmunicipioDataGridViewTextBoxColumn.DataSource = this.municipiosBindingSource1;
+            this.idmunicipioDataGridViewTextBoxColumn.DisplayMember = "descripcion";
+            this.idmunicipioDataGridViewTextBoxColumn.HeaderText = "Municipio";
+            this.idmunicipioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idmunicipioDataGridViewTextBoxColumn.Name = "idmunicipioDataGridViewTextBoxColumn";
+            this.idmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idmunicipioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idmunicipioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idmunicipioDataGridViewTextBoxColumn.ValueMember = "id_municipio";
+            this.idmunicipioDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iddepartamentoDataGridViewTextBoxColumn
+            // 
+            this.iddepartamentoDataGridViewTextBoxColumn.DataPropertyName = "id_departamento";
+            this.iddepartamentoDataGridViewTextBoxColumn.DataSource = this.departamentosBindingSource1;
+            this.iddepartamentoDataGridViewTextBoxColumn.DisplayMember = "descripcion";
+            this.iddepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento";
+            this.iddepartamentoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iddepartamentoDataGridViewTextBoxColumn.Name = "iddepartamentoDataGridViewTextBoxColumn";
+            this.iddepartamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iddepartamentoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.iddepartamentoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iddepartamentoDataGridViewTextBoxColumn.ValueMember = "id_departamento";
+            this.iddepartamentoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idindustriaDataGridViewTextBoxColumn
+            // 
+            this.idindustriaDataGridViewTextBoxColumn.DataPropertyName = "id_industria";
+            this.idindustriaDataGridViewTextBoxColumn.DataSource = this.industriasBindingSource1;
+            this.idindustriaDataGridViewTextBoxColumn.DisplayMember = "descripcion";
+            this.idindustriaDataGridViewTextBoxColumn.HeaderText = "Industria";
+            this.idindustriaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idindustriaDataGridViewTextBoxColumn.Name = "idindustriaDataGridViewTextBoxColumn";
+            this.idindustriaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idindustriaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idindustriaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idindustriaDataGridViewTextBoxColumn.ValueMember = "id_industria";
+            this.idindustriaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // creditoDataGridViewTextBoxColumn
+            // 
+            this.creditoDataGridViewTextBoxColumn.DataPropertyName = "credito";
+            this.creditoDataGridViewTextBoxColumn.HeaderText = "Credito";
+            this.creditoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.creditoDataGridViewTextBoxColumn.Name = "creditoDataGridViewTextBoxColumn";
+            this.creditoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.creditoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // diascreditoDataGridViewTextBoxColumn
+            // 
+            this.diascreditoDataGridViewTextBoxColumn.DataPropertyName = "dias_credito";
+            this.diascreditoDataGridViewTextBoxColumn.HeaderText = "Días Credito";
+            this.diascreditoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diascreditoDataGridViewTextBoxColumn.Name = "diascreditoDataGridViewTextBoxColumn";
+            this.diascreditoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diascreditoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // estadoDataGridViewCheckBoxColumn
+            // 
+            this.estadoDataGridViewCheckBoxColumn.DataPropertyName = "estado";
+            this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
+            this.estadoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.estadoDataGridViewCheckBoxColumn.Width = 125;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -539,6 +587,10 @@ namespace Progra3
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.industriasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -569,27 +621,31 @@ namespace Progra3
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtCredito;
-        private System.Windows.Forms.TextBox txtDiasCredito;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idclienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionclienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmunicipioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddepartamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idindustriaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creditoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diascreditoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.BindingSource municipiosBindingSource;
         private progra3TableAdapters.municipiosTableAdapter municipiosTableAdapter;
         private System.Windows.Forms.BindingSource industriasBindingSource;
         private progra3TableAdapters.industriasTableAdapter industriasTableAdapter;
         private System.Windows.Forms.BindingSource departamentosBindingSource;
         private progra3TableAdapters.departamentosTableAdapter departamentosTableAdapter;
+        private System.Windows.Forms.DateTimePicker dtpDiasCredito;
+        private System.Windows.Forms.BindingSource clientesBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idmunicipioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource municipiosBindingSource1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn iddepartamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource departamentosBindingSource1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idindustriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource industriasBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn creditoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diascreditoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
     }
 }

@@ -96,7 +96,7 @@ namespace Progra3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 701);
+            this.ClientSize = new System.Drawing.Size(560, 701);
             this.Controls.Add(this.btnMostrarLista);
             this.Controls.Add(this.txtMostrarLista);
             this.Controls.Add(this.label2);

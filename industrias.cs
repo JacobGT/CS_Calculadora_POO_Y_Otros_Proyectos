@@ -8,7 +8,10 @@ namespace Progra3
 {
     class industrias
     {
-        float id_industria;
-        string descripcion;
+        private int id_industria;
+        private string descripcion;
+
+        public int Id_Industria { get; set; }
+        public string Descripcion { get; set; }
     }
 }

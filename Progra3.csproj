@@ -53,6 +53,7 @@
     <Compile Include="catedratico.cs" />
     <Compile Include="cliente.cs" />
     <Compile Include="contacto.cs" />
+    <Compile Include="credito.cs" />
     <Compile Include="departamento.cs" />
     <Compile Include="empleado.cs" />
     <Compile Include="frmClientes.cs">
@@ -60,6 +61,30 @@
     </Compile>
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContacto.Designer.cs">
+      <DependentUpon>frmContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCredito.Designer.cs">
+      <DependentUpon>frmCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartamento.Designer.cs">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiasRestraso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiasRestraso.Designer.cs">
+      <DependentUpon>frmDiasRestraso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFactorial.cs">
       <SubType>Form</SubType>
@@ -85,6 +110,18 @@
     <Compile Include="frmFibonacci.Designer.cs">
       <DependentUpon>frmFibonacci.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFondosInsuficientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFondosInsuficientes.Designer.cs">
+      <DependentUpon>frmFondosInsuficientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIndustrias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndustrias.Designer.cs">
+      <DependentUpon>frmIndustrias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +139,18 @@
     </Compile>
     <Compile Include="frmModelo.Designer.cs">
       <DependentUpon>frmModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMunicipios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMunicipios.Designer.cs">
+      <DependentUpon>frmMunicipios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPocosDiasRestantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPocosDiasRestantes.Designer.cs">
+      <DependentUpon>frmPocosDiasRestantes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -143,6 +192,18 @@
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmContacto.resx">
+      <DependentUpon>frmContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCredito.resx">
+      <DependentUpon>frmCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiasRestraso.resx">
+      <DependentUpon>frmDiasRestraso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFactorial.resx">
       <DependentUpon>frmFactorial.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +216,12 @@
     <EmbeddedResource Include="frmFibonacci.resx">
       <DependentUpon>frmFibonacci.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFondosInsuficientes.resx">
+      <DependentUpon>frmFondosInsuficientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndustrias.resx">
+      <DependentUpon>frmIndustrias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListas.resx">
       <DependentUpon>frmListas.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModelo.resx">
       <DependentUpon>frmModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMunicipios.resx">
+      <DependentUpon>frmMunicipios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPocosDiasRestantes.resx">
+      <DependentUpon>frmPocosDiasRestantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

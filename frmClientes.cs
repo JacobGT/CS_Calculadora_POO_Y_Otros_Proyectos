@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+
 
 namespace Progra3
 {
@@ -37,67 +40,94 @@ namespace Progra3
         {
             if(txtID.Text != "")
             {
-                DataRow registro = progra3.clientes.FindByid_cliente(int.Parse(txtID.Text));
-                txtDescripcion.Text = registro["descripcion_cliente"].ToString();
-                txtDireccion.Text = registro["direccion"].ToString();
-                txtTelefono.Text = registro["telefono"].ToString();
-                comboMunicipio.SelectedValue = int.Parse(registro["id_municipio"].ToString());
-                comboDepartamento.SelectedValue = int.Parse(registro["id_departamento"].ToString());
-                comboIndustria.SelectedValue = int.Parse(registro["id_industria"].ToString());
-                txtCredito.Text = registro["credito"].ToString();
-                txtDiasCredito.Text = registro["dias_credito"].ToString();
+                client.Id_Cliente = int.Parse(txtID.Text);
+
+                DataRow registro = progra3.clientes.FindByid_cliente(client.Id_Cliente);
+                client.Descripcion_Cliente = registro["descripcion_cliente"].ToString();
+                client.Direccion = registro["direccion"].ToString();
+                client.Telefono = registro["telefono"].ToString();
+                client.Id_Municipio = int.Parse(registro["id_municipio"].ToString());
+                client.Id_Departamento = int.Parse(registro["id_departamento"].ToString());
+                client.Id_Industria = int.Parse(registro["id_industria"].ToString());
+                client.Credito = int.Parse(registro["credito"].ToString());
+                client.Dias_Credito = (registro["dias_credito"].ToString());
                 if ((bool)registro["estado"])
                 {
-                    checkEstado.Checked = true;
+                    client.Estado = true;
                 }
                 else
                 {
-                    checkEstado.Checked = false;
+                    client.Estado = false;
                 }
+
+                txtDescripcion.Text = client.Descripcion_Cliente;
+                txtDireccion.Text = client.Direccion;
+                txtTelefono.Text = client.Telefono;
+                comboMunicipio.SelectedValue = client.Id_Municipio;
+                comboDepartamento.SelectedValue = client.Id_Departamento;
+                comboIndustria.SelectedValue = client.Id_Industria;
+                txtCredito.Text = client.Credito.ToString();
+                dtpDiasCredito.Value = DateTime.ParseExact(client.Dias_Credito, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                checkEstado.Checked = client.Estado;
+
+
             }
                     
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            client.Descripcion_Cliente = txtDescripcion.Text;
+            client.Direccion = txtDireccion.Text;
+            client.Telefono = txtTelefono.Text;
+            client.Id_Municipio = int.Parse(comboMunicipio.SelectedValue.ToString());
+            client.Id_Departamento = int.Parse(comboDepartamento.SelectedValue.ToString());
+            client.Id_Industria = int.Parse(comboIndustria.SelectedValue.ToString());
+            client.Credito = int.Parse(txtCredito.Text);
+            client.Dias_Credito = dtpDiasCredito.Value.ToString("dd/MM/yyyy");
+            client.Estado = checkEstado.Checked;
+
             DataRow registro = this.progra3.clientes.NewRow();
-            registro["descripcion_cliente"] = txtDescripcion.Text;
-            registro["direccion"] = txtDireccion.Text;
-            registro["telefono"] = txtTelefono.Text;
-            registro["id_municipio"] = comboMunicipio.SelectedValue.ToString();
-            registro["id_departamento"] = comboDepartamento.SelectedValue.ToString();
-            registro["id_industria"] = comboIndustria.SelectedValue.ToString();
-            registro["credito"] = txtCredito.Text;
-            registro["dias_credito"] = txtDiasCredito.Text;
-            bool estado = true;
-            if (checkEstado.Checked != true)
-            {
-                estado = false;
-            }
-            registro["estado"] = estado;
+            registro["descripcion_cliente"] = client.Descripcion_Cliente;
+            registro["direccion"] = client.Direccion;
+            registro["telefono"] = client.Telefono;
+            registro["id_municipio"] = client.Id_Municipio;
+            registro["id_departamento"] = client.Id_Departamento;
+            registro["id_industria"] = client.Id_Industria;
+            registro["credito"] = client.Credito;
+            registro["dias_credito"] = client.Dias_Credito;
+            registro["estado"] = client.Estado;
 
             this.progra3.clientes.Rows.Add(registro);
             this.clientesTableAdapter.Update(this.progra3.clientes);
             this.dgvClientes.Refresh();
+
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            DataRow registro = progra3.clientes.FindByid_cliente(int.Parse(txtID.Text));
-            registro["descripcion_cliente"] = txtDescripcion.Text;
-            registro["direccion"] = txtDireccion.Text;
-            registro["telefono"] = txtTelefono.Text;
-            registro["id_municipio"] = comboMunicipio.SelectedValue.ToString();
-            registro["id_departamento"] = comboDepartamento.SelectedValue.ToString();
-            registro["id_industria"] = comboIndustria.SelectedValue.ToString();
-            registro["credito"] = txtCredito.Text;
-            registro["dias_credito"] = txtDiasCredito.Text;
-            bool estado = true;
-            if (checkEstado.Checked != true)
-            {
-                estado = false;
-            }
-            registro["estado"] = estado;
+            client.Id_Cliente = int.Parse(txtID.Text);
+            client.Descripcion_Cliente = txtDescripcion.Text;
+            client.Direccion = txtDireccion.Text;
+            client.Telefono = txtTelefono.Text;
+            client.Id_Municipio = int.Parse(comboMunicipio.SelectedValue.ToString());
+            client.Id_Departamento = int.Parse(comboDepartamento.SelectedValue.ToString());
+            client.Id_Industria = int.Parse(comboIndustria.SelectedValue.ToString());
+            client.Credito = int.Parse(txtCredito.Text);
+            client.Dias_Credito = dtpDiasCredito.Value.ToString("dd/MM/yyyy");
+            client.Estado = checkEstado.Checked;
+
+            DataRow registro = progra3.clientes.FindByid_cliente(client.Id_Cliente);
+            registro["descripcion_cliente"] = client.Descripcion_Cliente;
+            registro["direccion"] = client.Direccion;
+            registro["telefono"] = client.Telefono;
+            registro["id_municipio"] = client.Id_Municipio;
+            registro["id_departamento"] = client.Id_Departamento;
+            registro["id_industria"] = client.Id_Industria;
+            registro["credito"] = client.Credito;
+            registro["dias_credito"] = client.Dias_Credito;
+            registro["estado"] = client.Estado;
 
 
             this.clientesTableAdapter.Update(this.progra3.clientes);
@@ -106,12 +136,14 @@ namespace Progra3
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DataRow registro = progra3.clientes.FindByid_cliente(int.Parse(txtID.Text));
+            client.Id_Cliente = int.Parse(txtID.Text);
+            DataRow registro = progra3.clientes.FindByid_cliente(client.Id_Cliente);
             registro.Delete();
             this.clientesTableAdapter.Update(this.progra3.clientes);
 
             txtDescripcion.Text = "Elemento Eliminado de la Base de Datos.";
             txtID.Text = "";
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -122,7 +154,7 @@ namespace Progra3
             }
             else
             {
-                DataRow registro = progra3.clientes.FindByid_cliente(int.Parse(txtID.Text));
+                /*DataRow registro = progra3.clientes.FindByid_cliente(int.Parse(txtID.Text));
                 txtDescripcion.Text = registro["descripcion_cliente"].ToString();
                 txtDireccion.Text = registro["direccion"].ToString();
                 txtTelefono.Text = registro["telefono"].ToString();
@@ -138,8 +170,53 @@ namespace Progra3
                 else
                 {
                     checkEstado.Checked = false;
+                }*/
+
+                client.Id_Cliente = int.Parse(txtID.Text);
+
+                DataRow registro = progra3.clientes.FindByid_cliente(client.Id_Cliente);
+                client.Descripcion_Cliente = registro["descripcion_cliente"].ToString();
+                client.Direccion = registro["direccion"].ToString();
+                client.Telefono = registro["telefono"].ToString();
+                client.Id_Municipio = int.Parse(registro["id_municipio"].ToString());
+                client.Id_Departamento = int.Parse(registro["id_departamento"].ToString());
+                client.Id_Industria = int.Parse(registro["id_industria"].ToString());
+                client.Credito = int.Parse(registro["credito"].ToString());
+                client.Dias_Credito = (registro["dias_credito"].ToString());
+                if ((bool)registro["estado"])
+                {
+                    client.Estado = true;
                 }
+                else
+                {
+                    client.Estado = false;
+                }
+
+                txtDescripcion.Text = client.Descripcion_Cliente;
+                txtDireccion.Text = client.Direccion;
+                txtTelefono.Text = client.Telefono;
+                comboMunicipio.SelectedValue = client.Id_Municipio;
+                comboDepartamento.SelectedValue = client.Id_Departamento;
+                comboIndustria.SelectedValue = client.Id_Industria;
+                txtCredito.Text = client.Credito.ToString();
+                dtpDiasCredito.Value = DateTime.ParseExact(client.Dias_Credito, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                checkEstado.Checked = client.Estado;
             }
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAgregar_MouseEnter(object sender, EventArgs e)
+        {
+            txtID.Text = "";
         }
     }
 }

@@ -51,6 +51,7 @@ namespace Progra3
             this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ejemploIngresarYVisualizarListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cREDITOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,7 +172,8 @@ namespace Progra3
             this.tablaDepartamentosToolStripMenuItem,
             this.tablaMunicipiosToolStripMenuItem,
             this.tablaIndustriasToolStripMenuItem,
-            this.tablaDeContactosToolStripMenuItem});
+            this.tablaDeContactosToolStripMenuItem,
+            this.cREDITOToolStripMenuItem});
             this.parcial2MantenimientoListasToolStripMenuItem.Name = "parcial2MantenimientoListasToolStripMenuItem";
             this.parcial2MantenimientoListasToolStripMenuItem.Size = new System.Drawing.Size(296, 24);
             this.parcial2MantenimientoListasToolStripMenuItem.Text = "Parcial 2 / Mantenimiento Tablas (Access)";
@@ -189,24 +191,28 @@ namespace Progra3
             this.tablaDepartamentosToolStripMenuItem.Name = "tablaDepartamentosToolStripMenuItem";
             this.tablaDepartamentosToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.tablaDepartamentosToolStripMenuItem.Text = "Tabla Departamentos";
+            this.tablaDepartamentosToolStripMenuItem.Click += new System.EventHandler(this.tablaDepartamentosToolStripMenuItem_Click);
             // 
             // tablaMunicipiosToolStripMenuItem
             // 
             this.tablaMunicipiosToolStripMenuItem.Name = "tablaMunicipiosToolStripMenuItem";
             this.tablaMunicipiosToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.tablaMunicipiosToolStripMenuItem.Text = "Tabla Municipios";
+            this.tablaMunicipiosToolStripMenuItem.Click += new System.EventHandler(this.tablaMunicipiosToolStripMenuItem_Click);
             // 
             // tablaIndustriasToolStripMenuItem
             // 
             this.tablaIndustriasToolStripMenuItem.Name = "tablaIndustriasToolStripMenuItem";
             this.tablaIndustriasToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.tablaIndustriasToolStripMenuItem.Text = "Tabla Industrias";
+            this.tablaIndustriasToolStripMenuItem.Click += new System.EventHandler(this.tablaIndustriasToolStripMenuItem_Click);
             // 
             // tablaDeContactosToolStripMenuItem
             // 
             this.tablaDeContactosToolStripMenuItem.Name = "tablaDeContactosToolStripMenuItem";
             this.tablaDeContactosToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.tablaDeContactosToolStripMenuItem.Text = "Tabla de Contactos";
+            this.tablaDeContactosToolStripMenuItem.Click += new System.EventHandler(this.tablaDeContactosToolStripMenuItem_Click);
             // 
             // listasToolStripMenuItem
             // 
@@ -221,7 +227,7 @@ namespace Progra3
             this.listasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ejemploIngresarYVisualizarListasToolStripMenuItem});
             this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
-            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(128, 26);
             this.listasToolStripMenuItem1.Text = "Listas";
             // 
             // ejemploIngresarYVisualizarListasToolStripMenuItem
@@ -230,6 +236,13 @@ namespace Progra3
             this.ejemploIngresarYVisualizarListasToolStripMenuItem.Size = new System.Drawing.Size(322, 26);
             this.ejemploIngresarYVisualizarListasToolStripMenuItem.Text = "Ejemplo Ingresar y Visualizar Listas";
             this.ejemploIngresarYVisualizarListasToolStripMenuItem.Click += new System.EventHandler(this.ejemploIngresarYVisualizarListasToolStripMenuItem_Click);
+            // 
+            // cREDITOToolStripMenuItem
+            // 
+            this.cREDITOToolStripMenuItem.Name = "cREDITOToolStripMenuItem";
+            this.cREDITOToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.cREDITOToolStripMenuItem.Text = "CREDITO";
+            this.cREDITOToolStripMenuItem.Click += new System.EventHandler(this.cREDITOToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -279,6 +292,7 @@ namespace Progra3
         private System.Windows.Forms.ToolStripMenuItem listasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ejemploIngresarYVisualizarListasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cREDITOToolStripMenuItem;
     }
 }
 

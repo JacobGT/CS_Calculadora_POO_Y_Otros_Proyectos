@@ -8,8 +8,11 @@ namespace Progra3
 {
     class departamento
     {
-        float id_departamento;
-        string descripcion;
+        private int id_departamento;
+        private string descripcion;
+
+        public int Id_Departamento { get; set; }
+        public string Descripcion { get; set; }
 
     }
 }
