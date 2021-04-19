@@ -52,6 +52,7 @@
     <Compile Include="calcular.cs" />
     <Compile Include="catedratico.cs" />
     <Compile Include="cliente.cs" />
+    <Compile Include="cola.cs" />
     <Compile Include="contacto.cs" />
     <Compile Include="credito.cs" />
     <Compile Include="departamento.cs" />
@@ -61,6 +62,18 @@
     </Compile>
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCola.Designer.cs">
+      <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmColaImagenEjemplo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColaImagenEjemplo.Designer.cs">
+      <DependentUpon>frmColaImagenEjemplo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmContacto.cs">
       <SubType>Form</SubType>
@@ -146,6 +159,18 @@
     <Compile Include="frmMunicipios.Designer.cs">
       <DependentUpon>frmMunicipios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPilaImagenEjemplo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilaImagenEjemplo.Designer.cs">
+      <DependentUpon>frmPilaImagenEjemplo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPilas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilas.Designer.cs">
+      <DependentUpon>frmPilas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPocosDiasRestantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +207,7 @@
     <Compile Include="municipios.cs" />
     <Compile Include="Nodo.cs" />
     <Compile Include="persona.cs" />
+    <Compile Include="pilas.cs" />
     <Compile Include="progra3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +217,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCola.resx">
+      <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColaImagenEjemplo.resx">
+      <DependentUpon>frmColaImagenEjemplo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmContacto.resx">
       <DependentUpon>frmContacto.cs</DependentUpon>
@@ -233,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMunicipios.resx">
       <DependentUpon>frmMunicipios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilaImagenEjemplo.resx">
+      <DependentUpon>frmPilaImagenEjemplo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilas.resx">
+      <DependentUpon>frmPilas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocosDiasRestantes.resx">
       <DependentUpon>frmPocosDiasRestantes.cs</DependentUpon>

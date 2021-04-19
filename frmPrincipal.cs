@@ -158,5 +158,19 @@ namespace Progra3
             credit.MdiParent = this;
             credit.Show();
         }
+
+        private void pilasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPilas stack = new frmPilas();
+            stack.MdiParent = this;
+            stack.Show();
+        }
+
+        private void colasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola queue = new frmCola();
+            queue.MdiParent = this;
+            queue.Show();
+        }
     }
 }

@@ -48,10 +48,12 @@ namespace Progra3
             this.tablaMunicipiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablaIndustriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablaDeContactosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cREDITOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ejemploIngresarYVisualizarListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cREDITOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,10 +216,19 @@ namespace Progra3
             this.tablaDeContactosToolStripMenuItem.Text = "Tabla de Contactos";
             this.tablaDeContactosToolStripMenuItem.Click += new System.EventHandler(this.tablaDeContactosToolStripMenuItem_Click);
             // 
+            // cREDITOToolStripMenuItem
+            // 
+            this.cREDITOToolStripMenuItem.Name = "cREDITOToolStripMenuItem";
+            this.cREDITOToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.cREDITOToolStripMenuItem.Text = "CREDITO";
+            this.cREDITOToolStripMenuItem.Click += new System.EventHandler(this.cREDITOToolStripMenuItem_Click);
+            // 
             // listasToolStripMenuItem
             // 
             this.listasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listasToolStripMenuItem1});
+            this.listasToolStripMenuItem1,
+            this.pilasToolStripMenuItem,
+            this.colasToolStripMenuItem});
             this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
             this.listasToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listasToolStripMenuItem.Text = "Estructura de Datos";
@@ -227,7 +238,7 @@ namespace Progra3
             this.listasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ejemploIngresarYVisualizarListasToolStripMenuItem});
             this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
-            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(128, 26);
+            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.listasToolStripMenuItem1.Text = "Listas";
             // 
             // ejemploIngresarYVisualizarListasToolStripMenuItem
@@ -237,12 +248,19 @@ namespace Progra3
             this.ejemploIngresarYVisualizarListasToolStripMenuItem.Text = "Ejemplo Ingresar y Visualizar Listas";
             this.ejemploIngresarYVisualizarListasToolStripMenuItem.Click += new System.EventHandler(this.ejemploIngresarYVisualizarListasToolStripMenuItem_Click);
             // 
-            // cREDITOToolStripMenuItem
+            // pilasToolStripMenuItem
             // 
-            this.cREDITOToolStripMenuItem.Name = "cREDITOToolStripMenuItem";
-            this.cREDITOToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
-            this.cREDITOToolStripMenuItem.Text = "CREDITO";
-            this.cREDITOToolStripMenuItem.Click += new System.EventHandler(this.cREDITOToolStripMenuItem_Click);
+            this.pilasToolStripMenuItem.Name = "pilasToolStripMenuItem";
+            this.pilasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pilasToolStripMenuItem.Text = "Pilas";
+            this.pilasToolStripMenuItem.Click += new System.EventHandler(this.pilasToolStripMenuItem_Click);
+            // 
+            // colasToolStripMenuItem
+            // 
+            this.colasToolStripMenuItem.Name = "colasToolStripMenuItem";
+            this.colasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.colasToolStripMenuItem.Text = "Colas";
+            this.colasToolStripMenuItem.Click += new System.EventHandler(this.colasToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -293,6 +311,8 @@ namespace Progra3
         private System.Windows.Forms.ToolStripMenuItem listasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ejemploIngresarYVisualizarListasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cREDITOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pilasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colasToolStripMenuItem;
     }
 }
 
