@@ -172,5 +172,12 @@ namespace Progra3
             queue.MdiParent = this;
             queue.Show();
         }
+
+        private void listsV2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmList lista = new frmList();
+            lista.MdiParent = this;
+            lista.Show();
+        }
     }
 }

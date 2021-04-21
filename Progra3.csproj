@@ -135,6 +135,12 @@
     <Compile Include="frmIndustrias.Designer.cs">
       <DependentUpon>frmIndustrias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmList.Designer.cs">
+      <DependentUpon>frmList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,7 @@
     </Compile>
     <Compile Include="graficar.cs" />
     <Compile Include="industrias.cs" />
+    <Compile Include="list.cs" />
     <Compile Include="Lista.cs" />
     <Compile Include="municipios.cs" />
     <Compile Include="Nodo.cs" />
@@ -253,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIndustrias.resx">
       <DependentUpon>frmIndustrias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmList.resx">
+      <DependentUpon>frmList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListas.resx">
       <DependentUpon>frmListas.cs</DependentUpon>

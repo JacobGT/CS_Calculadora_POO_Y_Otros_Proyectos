@@ -54,6 +54,7 @@ namespace Progra3
             this.ejemploIngresarYVisualizarListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listsV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -236,7 +237,8 @@ namespace Progra3
             // listasToolStripMenuItem1
             // 
             this.listasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ejemploIngresarYVisualizarListasToolStripMenuItem});
+            this.ejemploIngresarYVisualizarListasToolStripMenuItem,
+            this.listsV2ToolStripMenuItem});
             this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
             this.listasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.listasToolStripMenuItem1.Text = "Listas";
@@ -261,6 +263,13 @@ namespace Progra3
             this.colasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.colasToolStripMenuItem.Text = "Colas";
             this.colasToolStripMenuItem.Click += new System.EventHandler(this.colasToolStripMenuItem_Click);
+            // 
+            // listsV2ToolStripMenuItem
+            // 
+            this.listsV2ToolStripMenuItem.Name = "listsV2ToolStripMenuItem";
+            this.listsV2ToolStripMenuItem.Size = new System.Drawing.Size(322, 26);
+            this.listsV2ToolStripMenuItem.Text = "Lists V2";
+            this.listsV2ToolStripMenuItem.Click += new System.EventHandler(this.listsV2ToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -313,6 +322,7 @@ namespace Progra3
         private System.Windows.Forms.ToolStripMenuItem cREDITOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pilasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listsV2ToolStripMenuItem;
     }
 }
 
