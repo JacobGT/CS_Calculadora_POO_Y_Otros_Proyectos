@@ -52,9 +52,10 @@ namespace Progra3
             this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ejemploIngresarYVisualizarListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listsV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listsV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablasHashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -229,7 +230,8 @@ namespace Progra3
             this.listasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listasToolStripMenuItem1,
             this.pilasToolStripMenuItem,
-            this.colasToolStripMenuItem});
+            this.colasToolStripMenuItem,
+            this.tablasHashToolStripMenuItem});
             this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
             this.listasToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listasToolStripMenuItem.Text = "Estructura de Datos";
@@ -250,6 +252,13 @@ namespace Progra3
             this.ejemploIngresarYVisualizarListasToolStripMenuItem.Text = "Ejemplo Ingresar y Visualizar Listas";
             this.ejemploIngresarYVisualizarListasToolStripMenuItem.Click += new System.EventHandler(this.ejemploIngresarYVisualizarListasToolStripMenuItem_Click);
             // 
+            // listsV2ToolStripMenuItem
+            // 
+            this.listsV2ToolStripMenuItem.Name = "listsV2ToolStripMenuItem";
+            this.listsV2ToolStripMenuItem.Size = new System.Drawing.Size(322, 26);
+            this.listsV2ToolStripMenuItem.Text = "Lists V2";
+            this.listsV2ToolStripMenuItem.Click += new System.EventHandler(this.listsV2ToolStripMenuItem_Click);
+            // 
             // pilasToolStripMenuItem
             // 
             this.pilasToolStripMenuItem.Name = "pilasToolStripMenuItem";
@@ -264,12 +273,12 @@ namespace Progra3
             this.colasToolStripMenuItem.Text = "Colas";
             this.colasToolStripMenuItem.Click += new System.EventHandler(this.colasToolStripMenuItem_Click);
             // 
-            // listsV2ToolStripMenuItem
+            // tablasHashToolStripMenuItem
             // 
-            this.listsV2ToolStripMenuItem.Name = "listsV2ToolStripMenuItem";
-            this.listsV2ToolStripMenuItem.Size = new System.Drawing.Size(322, 26);
-            this.listsV2ToolStripMenuItem.Text = "Lists V2";
-            this.listsV2ToolStripMenuItem.Click += new System.EventHandler(this.listsV2ToolStripMenuItem_Click);
+            this.tablasHashToolStripMenuItem.Name = "tablasHashToolStripMenuItem";
+            this.tablasHashToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tablasHashToolStripMenuItem.Text = "Tablas Hash";
+            this.tablasHashToolStripMenuItem.Click += new System.EventHandler(this.tablasHashToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -323,6 +332,7 @@ namespace Progra3
         private System.Windows.Forms.ToolStripMenuItem pilasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listsV2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tablasHashToolStripMenuItem;
     }
 }
 

@@ -179,5 +179,12 @@ namespace Progra3
             lista.MdiParent = this;
             lista.Show();
         }
+
+        private void tablasHashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHashTables hash = new frmHashTables();
+            hash.MdiParent = this;
+            hash.Show();
+        }
     }
 }

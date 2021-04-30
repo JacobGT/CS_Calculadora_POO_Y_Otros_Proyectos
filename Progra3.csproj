@@ -208,6 +208,13 @@
       <DependentUpon>frmSumar.cs</DependentUpon>
     </Compile>
     <Compile Include="graficar.cs" />
+    <Compile Include="frmHashTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHashTables.Designer.cs">
+      <DependentUpon>frmHashTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HashTable.cs" />
     <Compile Include="industrias.cs" />
     <Compile Include="list.cs" />
     <Compile Include="Lista.cs" />
@@ -296,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSumar.resx">
       <DependentUpon>frmSumar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHashTables.resx">
+      <DependentUpon>frmHashTables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
