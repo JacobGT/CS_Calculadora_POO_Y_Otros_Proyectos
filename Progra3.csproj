@@ -49,14 +49,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="alumno.cs" />
+    <Compile Include="cajero.cs" />
     <Compile Include="calcular.cs" />
     <Compile Include="catedratico.cs" />
     <Compile Include="cliente.cs" />
     <Compile Include="cola.cs" />
+    <Compile Include="colaBancoClientes.cs" />
     <Compile Include="contacto.cs" />
+    <Compile Include="contadorClientesBanco.cs" />
     <Compile Include="credito.cs" />
     <Compile Include="departamento.cs" />
     <Compile Include="empleado.cs" />
+    <Compile Include="frmCajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCajeros.Designer.cs">
+      <DependentUpon>frmCajeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +77,12 @@
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmColaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColaClientes.Designer.cs">
+      <DependentUpon>frmColaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmColaImagenEjemplo.cs">
       <SubType>Form</SubType>
@@ -165,6 +180,12 @@
     <Compile Include="frmMunicipios.Designer.cs">
       <DependentUpon>frmMunicipios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPantallaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPantallaClientes.Designer.cs">
+      <DependentUpon>frmPantallaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPilaImagenEjemplo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +222,12 @@
     <Compile Include="frmRestar.Designer.cs">
       <DependentUpon>frmRestar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicios.Designer.cs">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSumar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +245,7 @@
     <Compile Include="industrias.cs" />
     <Compile Include="list.cs" />
     <Compile Include="Lista.cs" />
+    <Compile Include="listaBancoClientes.cs" />
     <Compile Include="municipios.cs" />
     <Compile Include="Nodo.cs" />
     <Compile Include="persona.cs" />
@@ -229,11 +257,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servicios.cs" />
+    <EmbeddedResource Include="frmCajeros.resx">
+      <DependentUpon>frmCajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColaClientes.resx">
+      <DependentUpon>frmColaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmColaImagenEjemplo.resx">
       <DependentUpon>frmColaImagenEjemplo.cs</DependentUpon>
@@ -283,6 +318,9 @@
     <EmbeddedResource Include="frmMunicipios.resx">
       <DependentUpon>frmMunicipios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPantallaClientes.resx">
+      <DependentUpon>frmPantallaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPilaImagenEjemplo.resx">
       <DependentUpon>frmPilaImagenEjemplo.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRestar.resx">
       <DependentUpon>frmRestar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicios.resx">
+      <DependentUpon>frmServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSumar.resx">
       <DependentUpon>frmSumar.cs</DependentUpon>

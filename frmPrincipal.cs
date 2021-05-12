@@ -186,5 +186,24 @@ namespace Progra3
             hash.MdiParent = this;
             hash.Show();
         }
+
+        private void proyectoBancoToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            frmCajeros cajeros = new frmCajeros();
+            cajeros.MdiParent = this;
+            cajeros.Show();
+
+            frmServicios servicios = new frmServicios();
+            servicios.MdiParent = this;
+            servicios.Show();
+
+            frmColaClientes colaClientes = new frmColaClientes();
+            colaClientes.MdiParent = this;
+            colaClientes.Show();
+
+            frmPantallaClientes pantallaClientes = new frmPantallaClientes();
+            pantallaClientes.MdiParent = this;
+            pantallaClientes.Show();
+        }
     }
 }

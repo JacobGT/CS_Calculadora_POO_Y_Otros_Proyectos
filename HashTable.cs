@@ -1,5 +1,8 @@
 ﻿using System;
+
+// Debemos incluir esta libreria
 using System.Collections;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +15,7 @@ namespace Progra3
         // Creamos nuestra tabla hash
         Hashtable tablaHash = new Hashtable();
 
+        // el uso de este es solo para iterar
         private string contenido;
         public string Contenido { get; set; }
 
@@ -159,7 +163,7 @@ namespace Progra3
             tercerValor = primerValor * segundoValor;
             int quintoValor = tercerValor * cantidadLetras;
 
-            // juntamos las dos partes
+            // juntamos las dos partes (concatenarlas no se suman)
             int hash = int.Parse(cuartoValor.ToString() + quintoValor.ToString());
 
             // para ahorrar espacio lo limitamos a 50 opciones (modulus operator)

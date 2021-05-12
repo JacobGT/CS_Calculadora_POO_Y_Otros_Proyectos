@@ -56,6 +56,7 @@ namespace Progra3
             this.pilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasHashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proyectoBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,8 @@ namespace Progra3
             this.ejemplosDePOOToolStripMenuItem,
             this.mantenimientosToolStripMenuItem,
             this.parcial2MantenimientoListasToolStripMenuItem,
-            this.listasToolStripMenuItem});
+            this.listasToolStripMenuItem,
+            this.proyectoBancoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1330, 28);
@@ -242,7 +244,7 @@ namespace Progra3
             this.ejemploIngresarYVisualizarListasToolStripMenuItem,
             this.listsV2ToolStripMenuItem});
             this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
-            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(170, 26);
             this.listasToolStripMenuItem1.Text = "Listas";
             // 
             // ejemploIngresarYVisualizarListasToolStripMenuItem
@@ -262,23 +264,30 @@ namespace Progra3
             // pilasToolStripMenuItem
             // 
             this.pilasToolStripMenuItem.Name = "pilasToolStripMenuItem";
-            this.pilasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pilasToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.pilasToolStripMenuItem.Text = "Pilas";
             this.pilasToolStripMenuItem.Click += new System.EventHandler(this.pilasToolStripMenuItem_Click);
             // 
             // colasToolStripMenuItem
             // 
             this.colasToolStripMenuItem.Name = "colasToolStripMenuItem";
-            this.colasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.colasToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.colasToolStripMenuItem.Text = "Colas";
             this.colasToolStripMenuItem.Click += new System.EventHandler(this.colasToolStripMenuItem_Click);
             // 
             // tablasHashToolStripMenuItem
             // 
             this.tablasHashToolStripMenuItem.Name = "tablasHashToolStripMenuItem";
-            this.tablasHashToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tablasHashToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.tablasHashToolStripMenuItem.Text = "Tablas Hash";
             this.tablasHashToolStripMenuItem.Click += new System.EventHandler(this.tablasHashToolStripMenuItem_Click);
+            // 
+            // proyectoBancoToolStripMenuItem
+            // 
+            this.proyectoBancoToolStripMenuItem.Name = "proyectoBancoToolStripMenuItem";
+            this.proyectoBancoToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
+            this.proyectoBancoToolStripMenuItem.Text = "Proyecto Banco";
+            this.proyectoBancoToolStripMenuItem.Click += new System.EventHandler(this.proyectoBancoToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -333,6 +342,7 @@ namespace Progra3
         private System.Windows.Forms.ToolStripMenuItem colasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listsV2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tablasHashToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem proyectoBancoToolStripMenuItem;
     }
 }
 
