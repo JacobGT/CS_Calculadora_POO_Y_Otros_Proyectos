@@ -55,13 +55,14 @@ namespace Progra3
             // 
             // btnbSync
             // 
+            this.btnbSync.BackColor = System.Drawing.SystemColors.Window;
             this.btnbSync.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbSync.Location = new System.Drawing.Point(398, 12);
             this.btnbSync.Name = "btnbSync";
             this.btnbSync.Size = new System.Drawing.Size(129, 39);
             this.btnbSync.TabIndex = 5;
             this.btnbSync.Text = "⟲ Refresh";
-            this.btnbSync.UseVisualStyleBackColor = true;
+            this.btnbSync.UseVisualStyleBackColor = false;
             this.btnbSync.Click += new System.EventHandler(this.btnbSync_Click);
             // 
             // frmColaClientes

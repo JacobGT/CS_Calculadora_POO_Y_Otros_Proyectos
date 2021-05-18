@@ -45,6 +45,8 @@ namespace Progra3
             // 
             // btnC1
             // 
+            this.btnC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnC1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnC1.Location = new System.Drawing.Point(27, 12);
             this.btnC1.Name = "btnC1";
             this.btnC1.Size = new System.Drawing.Size(132, 70);

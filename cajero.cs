@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Progra3
 {
@@ -24,9 +25,18 @@ namespace Progra3
 
         public string pasarCliente()
         {
+            try
+            {
+                colaBancoClientes.peekCola();
+            } catch (Exception)
+            {
+                MessageBox.Show("No hay más clientes por atender.", "Cola vacía.");
+                return null;
+            }
             contador++;
             contadorClientesBanco.contadorGeneral++;
             return colaBancoClientes.dequeueCola() + "-->" + nombre;
+
         }
     }
 }

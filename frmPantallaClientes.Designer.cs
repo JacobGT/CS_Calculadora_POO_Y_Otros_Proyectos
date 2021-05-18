@@ -46,6 +46,7 @@ namespace Progra3
             this.txtPantalla.Name = "txtPantalla";
             this.txtPantalla.Size = new System.Drawing.Size(562, 652);
             this.txtPantalla.TabIndex = 0;
+            this.txtPantalla.TextChanged += new System.EventHandler(this.txtPantalla_TextChanged);
             // 
             // txtContador
             // 

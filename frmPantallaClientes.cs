@@ -49,5 +49,10 @@ namespace Progra3
             txtPantalla.Text = "";
             listaBancoClientes.clearLista();
         }
+
+        private void txtPantalla_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
