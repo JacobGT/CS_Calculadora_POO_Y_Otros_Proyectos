@@ -71,7 +71,7 @@ namespace Progra3
             this.proyectoBancoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1330, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1783, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuPrincipal";
             // 
@@ -295,7 +295,7 @@ namespace Progra3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1330, 722);
+            this.ClientSize = new System.Drawing.Size(1783, 728);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
