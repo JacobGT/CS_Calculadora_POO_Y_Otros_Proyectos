@@ -33,7 +33,7 @@ Elementos de la calculadora.
 - Graficadora✅
 
 # Simulador de Cola Banco
-![BancQueue Image](Images/ProyectoBanco.png)
+![BankSimulator Image](Images/ProyectoBanco.png)
 - Operaciones Básicas: Presenta la Vista de un Cliente, Administrador y Cajero en un Banco ✅
 - Operaciones: Actualizacion en tiempo real de cola ✅
 - GUI usando Queue y POO✅
@@ -63,6 +63,7 @@ Representacion y explicacion del funcionamiento de las Pilas.
 
 ## Lists
 ![Lists Image](Images/Listas.png)
+
 Representacion y explicacion del funcionamiento de las Listas.
 
 ## Fibonacci & Factorial
@@ -79,4 +80,4 @@ Mantenimientos de distintas tablas de access con distinta dificultad de mantenim
 ![Clases Image](Images/clasesProyecto3.png)
 ![Clases Image](Images/clasesProyecto4.png)
 
-Clases incluidas ~hasta ahora~
+Gracias por su atencion. :)
