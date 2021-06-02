@@ -46,7 +46,7 @@ Elementos de la calculadora.
 ![TablaMunicipios Image](Images/TablaMunicipiosParcial2.png)
 ![MemeFondosInsuficientes Image](Images/fondosInsuficientes.png)
 ![MemesDiasRestantes Image](Images/díasRestantesPocos.png)
-![CreditosParcial2 Image](Images/CreditosParcial2.png.png)
+![CreditosParcial2 Image](Images/CreditosParcial2.png)
 
 # Hash Tables
 ![HashTables Image](Images/HashTables.png)
